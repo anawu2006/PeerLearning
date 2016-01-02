@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_COURSESABC_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_COURSESABC_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_COURSESABC_LAYOUT</name>
+		<description>COM_JOOMDLE_COURSESABC_LAYOUT_DESCRIPTION</description>
+		<config><fields name="params"><fieldset name="basic">
+			 <field type="textarea" name="start_chars" cols="30" rows="3" label="COM_JOOMDLE_START_CHARS" description="COM_JOOMDLE_START_CHARS_DESCRIPTION" />
+		 </fieldset></fields></config>
+		<advanced>
+
+		</advanced>
+	</state>
+</metadata>

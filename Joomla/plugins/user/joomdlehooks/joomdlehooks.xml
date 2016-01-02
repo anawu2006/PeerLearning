@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="user" client="site" order="100" folder="joomdlehooks" method="upgrade">
+	<name>User hooks - Joomdle</name>
+	<author>Antonio Duran Terres</author>
+	<authorEmail>antonio.duran.terres@gmail.com</authorEmail>
+	<creationDate>February 2009</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>antonio.duran.terres@gmail.com</authorEmail>
+	<authorUrl>www.joomdle.com</authorUrl>
+	<version>1.0</version>
+	<description>Performs user sync and Single Sign On</description>
+	<files>
+		<filename plugin="joomdlehooks">joomdlehooks.php</filename>
+	</files>
+	  <languages>
+		<language tag="en-GB">language/en-GB.plg_user_joomdlehooks.ini</language>
+		<language tag="es-ES">language/es-ES.plg_user_joomdlehooks.ini</language>
+		<language tag="de-DE">language/de-DE.plg_user_joomdlehooks.ini</language>
+		<language tag="fr-FR">language/fr-FR.plg_user_joomdlehooks.ini</language>
+		<language tag="it-IT">language/it-IT.plg_user_joomdlehooks.ini</language>
+	  </languages>
+	<config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="login_event_to_hook" type="list" default="onUserAfterLogin" label="COM_JOOMDLE_LOGIN_EVENT" description="COM_JOOMDLE_LOGIN_EVENT_DESCRIPTION">
+                    <option value="0">COM_JOOMDLE_NONE</option>
+                    <option value="onUserLogin">onUserLogin</option>
+                    <option value="onUserAfterLogin">onUserAfterLogin</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>

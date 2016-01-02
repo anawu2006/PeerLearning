@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="mapping">
+		<field name="joomla_app" type="joomlacomponent"
+			description="COM_JOOMDLE_ADDITIONAL_DATA_SOURCE_DESCRIPTION"
+			label="COM_JOOMDLE_ADDITIONAL_DATA_SOURCE"
+            class="readonly"
+            readonly="true"
+		/>
+
+		<field name="joomla_field" type="joomlafield"
+			description="COM_JOOMDLE_JOOMLA_FIELD_DESCRIPTION"
+			label="COM_JOOMDLE_JOOMLA_FIELD"
+		/>
+
+		<field name="moodle_field" type="moodlefield"
+			description="COM_JOOMDLE_MOODLE_FIELD_DESCRIPTION"
+			label="COM_JOOMDLE_MOODLE_FIELD"
+		/>
+
+		<field
+            name="id"
+            type="hidden"
+            class="readonly"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC"
+            default="0"
+            readonly="true"
+            />
+
+	</fieldset>
+</form>

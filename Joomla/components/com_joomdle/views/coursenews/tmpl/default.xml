@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_COURSENEWS_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_COURSENEWS_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_COURSENEWS_LAYOUT</name>
+		<description>COM_JOOMDLE_COURSENEWS_LAYOUT_DESCRIPTION</description>
+
+        <fields name="request">
+            <fieldset name="request">
+			<field type="course" name="course_id" size="3" label="COM_JOOMDLE_COURSE" description="COM_JOOMDLE_COURSE_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields" />
+            </fieldset>
+        </fields>
+
+	</state>
+</metadata>

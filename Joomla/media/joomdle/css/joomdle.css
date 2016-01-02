@@ -1,0 +1,23 @@
+.course_topic {
+    border-color:#DDDDDD;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    background: #F2F2F2;
+}
+
+.profile_data {
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color:#DDDDDD #DDDDDD #CCCCCC;
+}
+
+.joomdle_course_description {
+}
+
+.joomdle_course_description p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.icon-48-joomdle {background-image: url(../media/joomdle/images/icon-48-joomdle.png);}
+

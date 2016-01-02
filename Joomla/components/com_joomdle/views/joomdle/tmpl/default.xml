@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_DEFAULT_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_DEFAULT_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_DEFAULT_LAYOUT</name>
+		<description>COM_JOOMDLE_DEFAULT_LAYOUT_DESCRIPTION</description>
+			<config><fields name="params"><fieldset name="listing" label="COM_JOOMDLE_LISTING_FIELDSET_LABEL">
+			<field name="enrollable_only" type="radio" default="0" 
+			label="COM_JOOMDLE_ENROLLABLE_ONLY" description="COM_JOOMDLE_ENROLLABLE_ONLY_DESCRIPTION"
+			class="btn-group">
+                                <option value="0">JNO</option>
+                                <option value="1">JYES</option>
+                        </field>
+			<field name="show_buttons" type="radio" default="0" 
+			label="COM_JOOMDLE_SHOW_BUTTONS" description="COM_JOOMDLE_SHOW_BUTTONS_DESCRIPTION"
+			class="btn-group">
+                                <option value="0">JNO</option>
+                                <option value="1">JYES</option>
+                        </field>
+			<field name="show_description" type="radio" default="1" 
+			label="COM_JOOMDLE_SHOW_DESCRIPTION" description="COM_JOOMDLE_SHOW_DESCRIPTION_DESCRIPTION"
+			class="btn-group">
+                                <option value="0">JNO</option>
+                                <option value="1">JYES</option>
+                        </field>
+
+			<field name="sort_by" type="list" label="COM_JOOMDLE_SORT_BY"
+            description="COM_JOOMDLE_SORT_BY_DESCRIPTION" 
+            size="1" default="name">
+				<option value="name">
+					COM_JOOMDLE_NAME</option>
+				<option value="date">
+					COM_JOOMDLE_DATE</option>
+				<option value="sortorder">
+					COM_JOOMDLE_MOODLE_SORTORDER</option>
+			</field>
+
+			</fieldset></fields></config>
+		<advanced>
+
+		</advanced>
+	</state>
+</metadata>

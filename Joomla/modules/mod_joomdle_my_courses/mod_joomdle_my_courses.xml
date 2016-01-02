@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Joomdle My Courses</name>
+	<author>Antonio Duran</author>
+	<creationDate>October 2009</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>antonio.duran.terres@gmail.com</authorEmail>
+	<authorUrl>www.joomldle.com</authorUrl>
+	<version>1.0</version>
+	<description>Shows Moodle courses the user is in</description>
+	<files>
+		<filename module="mod_joomdle_my_courses">mod_joomdle_my_courses.php</filename>
+		<filename module="mod_joomdle_my_courses">index.html</filename>
+		<filename module="mod_joomdle_my_courses">helper.php</filename>
+		<filename module="mod_joomdle_my_courses">tmpl/default.php</filename>
+	</files>
+	  <languages>
+		<language tag="en-GB">language/en-GB.mod_joomdle_my_courses.ini</language>
+		<language tag="es-ES">language/es-ES.mod_joomdle_my_courses.ini</language>
+		<language tag="fr-FR">language/fr-FR.mod_joomdle_my_courses.ini</language>
+		<language tag="de-DE">language/de-DE.mod_joomdle_my_courses.ini</language>
+		<language tag="pt-BR">language/pt-BR.mod_joomdle_my_courses.ini</language>
+		<language tag="it-IT">language/it-IT.mod_joomdle_my_courses.ini</language>
+	  </languages>
+	  <config><fields name="params"><fieldset name="basic">
+		   <field name="group_by_category" type="radio" default="0" 
+				label="COM_JOOMDLE_GROUP_BY_CATEGORY" description="COM_JOOMDLE_GROUP_BY_CATEGORY_DESCRIPTION"
+				class="btn-group">
+									<option value="0">JNO</option>
+									<option value="1">JYES</option>
+							</field>
+			<field name="linkto" type="list" default="moodle" label="COM_JOOMDLE_LINKTO" description="COM_JOOMDLE_LINKTO_DESCRIPTION">
+				<option value="moodle">Moodle course</option>
+				<option value="joomdlecourse">Joomdle course view</option>
+				<option value="detail">Joomdle course details view</option>
+			</field>
+			<field name="nocourses_text" type="textarea" default="" label="COM_JOOMDLE_NOCOURSES_TEXT" rows="3" cols="30" description="COM_JOOMDLE_NOCOURSES_TEXT_DESCRIPTION" />
+			<field name="show_unenrol_link" type="radio" default="0" 
+				label="COM_JOOMDLE_SHOW_UNENROL_LINK" description="COM_JOOMDLE_SHOW_UNENROL_LINK_DESCRIPTION"
+				class="btn-group">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+	        <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+		</fieldset></fields></config>
+</extension>

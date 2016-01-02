@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_WRAPPER_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_WRAPPER_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_WRAPPER_LAYOUT</name>
+		<description>COM_JOOMDLE_WRAPPER_LAYOUT_DESCRIPTION</description>
+
+
+		<config><fields name="params"><fieldset name="basic">
+		<field name="moodle_page_type" type="list" default="moodle" label="COM_JOOMDLE_PAGE_TYPE" description="COM_JOOMDLE_PAGE_TYPE_DESCRIPTION">
+                        <option value="moodle">Moodle home</option>
+                        <option value="course">Course</option>
+						<option value="edituser">Edit Moodle profile</option>
+		</field>
+		 <field type="course" name="course_id" label="COM_JOOMDLE_COURSE" description="COM_JOODMLE_COURSE_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields" />
+
+		</fieldset></fields></config>
+	</state>
+</metadata>

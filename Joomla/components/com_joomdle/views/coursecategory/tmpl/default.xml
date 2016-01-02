@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_COURSECATEGORY_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_COURSECATEGORY_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_COURSECATEGORY_LAYOUT</name>
+		<description>COM_JOOMDLE_COURSECATEGORY_LAYOUT_DESCRIPTION</description>
+
+		<fields name="request">
+			<fieldset name="request">
+			<field type="coursecategory" name="cat_id"  label="COM_JOOMDLE_CATEGORY" description="COM_JOOMDLE_CATEGORY_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields" />
+			</fieldset>
+		</fields>
+
+
+		<advanced>
+
+		</advanced>
+	</state>
+</metadata>

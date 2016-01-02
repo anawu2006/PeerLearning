@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_REGISTER_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_REGISTER_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_REGISTER_LAYOUT</name>
+		<description>COM_JOOMDLE_REGISTER_LAYOUT_DESCRIPTION</description>
+	</state>
+</metadata>

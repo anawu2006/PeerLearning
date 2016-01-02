@@ -1,0 +1,225 @@
+/* General list definition */
+.joomdle_item_title {
+	border-style: solid;
+	border-color:#e5e5e5;
+	border-width: 1px 1px 1px 1px;
+	background: #f2f2f2; 
+    margin-bottom: 5px;
+	-moz-border-radius: 10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	font-weight:bold;
+	padding: 5px; 
+    margin-bottom: 2px;
+	overflow:auto;
+}
+
+/* items shown with no description (4 round corners) */
+.joomdle_item_full {
+    border-style: solid;
+    border-color:#e5e5e5;
+    border-width: 1px 1px 1px 1px;
+    background: #f2f2f2;
+    margin-bottom: 5px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    font-weight:bold;
+    padding: 5px;
+    margin-bottom: 2px;
+    overflow:auto;
+}
+
+.joomdle_item_content {
+	-moz-border-radius: 0px 0px 10px 10px;
+	border-radius: 0px 0px 10px 10px;
+	border-style: solid;
+	border-color:#e5e5e5;
+	border-width: 1px 1px 1px 1px;
+	background: #f5fcf5; 
+    margin-bottom: 10px;
+	padding: 5px; 
+	overflow:auto;
+	padding-bottom:1px;
+}
+
+
+/* Course view */
+.joomdle_section_list_item_title {
+}
+
+.joomdle_section_list_item_resources {
+}
+
+.joomdle_section_list_item_resources_content {
+	padding-left: 10px; 
+}
+
+/* Course / Category Lists Views */
+.joomdle_course_list_item_title {
+}
+
+.joomdle_course_list_item_description {
+}
+
+.joomdle_category_list_item_title {
+}
+
+.joomdle_category_list_item_description {
+}
+
+.joomdle_list_description { /* subarea for category description */
+        background: #F8F7EE;
+        color: black;
+        margin-bottom: 10px;
+        padding: 5px;
+        -moz-box-shadow: 5px 5px 5px #ccc;
+        -webkit-box-shadow: 5px 5px 5px #ccc;
+        box-shadow: 5px 5px 5px #ccc;
+}
+
+/* Events lists */
+.joomdle_event_list_item_date {
+}
+
+.joomdle_event_list_item_name {
+}
+
+/* News lists */
+.joomdle_news_list_item_date {
+}
+
+.joomdle_news_list_item_name {
+}
+
+/* Topics list */
+.joomdle_topic_number {
+}
+
+.joomdle_topic_name {
+}
+
+/* Users lists */
+.joomdle_user_list_item {
+	-moz-border-radius: 10px 10px 10px 10px;
+	border-radius: 10px 10px 10px 10px;
+	border-style: solid;
+	border-color:#e5e5e5;
+	border-width: 1px 1px 1px 1px;
+	background: #f5fcf5; 
+    margin-bottom: 10px;
+	padding-bottom: 5px; 
+	height: 73px;
+}
+
+.joomdle_user_list_item_pic {
+	float: left; 
+	border-style: solid;
+	border-color:#e5e5e5;
+	border-width: 1px 1px 1px 1px;
+	padding: 2px;
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	margin-left: 10px; 
+	width: 64px;
+	background: #fff; 
+}
+
+.joomdle_user_list_item_name {
+	padding-left: 100px;
+	padding-top: 30px;
+}
+
+.joomdle_user_list_item_name a:link {
+	font-weight:bold;
+}
+.joomdle_user_list_item_name a:visited {
+	font-weight:bold;
+}
+
+/* Teacher page */
+.joomdle_user_details {
+    margin-bottom: 10px;
+	padding-bottom: 5px; 
+	padding-top: 10px; 
+	padding-left: 100px;
+}
+
+.joomdle_user_pic {
+	float: left; 
+	border-style: solid;
+	border-color:#e5e5e5;
+	border-width: 1px 1px 1px 1px;
+	padding: 2px;
+	margin-top: 5px; 
+	margin-bottom: 5px; 
+	margin-left: 10px; 
+	background: #fff; 
+}
+/* Course Detail View */
+/* TODO: add definitios for elemnts in detail view */
+
+.joomdle-courselist h4 {
+	margin-bottom:10px;
+}
+
+.joomdle_course_description {
+	overflow:auto;
+	padding-bottom:1px;
+}
+
+ul.joomdle_certificates {list-style-type: circle;}
+
+table.simpletable {
+	border: 1px solid;
+	border-color:black;
+}
+
+.simpletable td {
+	border: 1px solid;
+	border-color:black;
+}
+
+td.simpletable {
+	border: 1px solid;
+	border-color:black;
+}
+
+.joomdle_completion_info {
+    overflow:auto;
+    padding-left:40px;
+    font-size:0.85em;color:#aaa;
+}
+
+.joomdle_mycourses_no_list ul {
+    list-style-type: none;
+    margin-left: 0px !important;
+}
+
+.joomdle_mycourses_no_list img {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 3px solid;
+    float: left !important;
+    margin-left: 0px !important;
+    margin-right: 10px !important;
+    margin-bottom: 9px !important;      
+}
+
+.joomdle_mycourses_no_list ul li a {
+    vertical-align: top;
+}
+
+.joomdle_mycourses_no_list .clear_float {
+    clear: left;
+    border-bottom: 2px dotted;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.joomdle_mycourses_no_list .course_summary {
+    text-align: justify;
+}
+
+.joomdle_nocourses_message {
+}

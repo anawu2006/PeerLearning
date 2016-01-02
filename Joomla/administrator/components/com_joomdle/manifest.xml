@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade" client="site">
+    <name>com_joomdle</name>
+    <author>Qontori Pte Ltd</author>
+    <authorEmail>development@qontori.com</authorEmail>
+    <creationDate>04/02/2010</creationDate>
+	<copyright>Copyright (C) 2014 Qontori Pte Ltd</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+    <version>1.0.5</version>
+    <description>Tools for Joomla - Moodle integration</description>
+
+	<scriptfile>install.php</scriptfile>
+    <!-- installation part -->
+	<install folder="com_joomdle/administrator/components/com_joomdle">
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+			<file driver="postgresql" charset="utf8">sql/install.postgresql.utf8.sql</file>
+		</sql>
+	</install>
+
+
+    <!-- user part -->
+    <files folder="com_joomdle/components/com_joomdle">
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>router.php</filename>
+        <filename>joomdle.php</filename>
+        <filename>connection_test.php</filename>
+        <folder>controllers</folder>
+        <folder>models</folder>
+        <folder>views</folder>
+        <folder>helpers</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+
+    <languages>
+	<language tag="en-GB">com_joomdle/language/en-GB/en-GB.com_joomdle.ini</language>
+	<language tag="es-ES">com_joomdle/language/es-ES/es-ES.com_joomdle.ini</language>
+	<language tag="pt-BR">com_joomdle/language/pt-BR/pt-BR.com_joomdle.ini</language>
+	<language tag="el-GR">com_joomdle/language/el-GR/el-GR.com_joomdle.ini</language>
+	<language tag="de-DE">com_joomdle/language/de-DE/de-DE.com_joomdle.ini</language>
+	<language tag="fr-FR">com_joomdle/language/fr-FR/fr-FR.com_joomdle.ini</language>
+	<language tag="it-IT">com_joomdle/language/it-IT/it-IT.com_joomdle.ini</language>
+    </languages>
+
+	<media destination="joomdle" folder="/com_joomdle/administrator/components/com_joomdle/assets">
+		<folder>images</folder>
+		<folder>css</folder>
+	</media>
+
+
+    <!--  task="default" administration part -->
+    <administration>
+
+    <menu>COM_JOOMDLE</menu>
+    <submenu>
+                  <menu link="option=com_joomdle" img="components/com_joomdle/assets/images/icon-16-cpanel.png">COM_JOOMDLE_CONTROL_PANEL</menu>
+                  <menu link="option=com_joomdle&amp;view=config" img="components/com_joomdle/assets/images/icon-16-config.png">COM_JOOMDLE_CONFIGURATION</menu>
+                  <menu link="option=com_joomdle&amp;view=users" img="components/com_joomdle/assets/images/icon-16-users.png">COM_JOOMDLE_USERS</menu>
+                  <menu link="option=com_joomdle&amp;view=mappings" img="components/com_joomdle/assets/images/icon-16-mappings.png">COM_JOOMDLE_MAPPINGS</menu>
+                  <menu link="option=com_joomdle&amp;view=customprofiletypes" img="components/com_joomdle/assets/images/icon-16-profiletypes.png">COM_JOOMDLE_CUSTOM_PROFILES</menu>
+                  <menu link="option=com_joomdle&amp;view=courseapplications" img="components/com_joomdle/assets/images/icon-16-applications.png">COM_JOOMDLE_APPLICATIONS</menu>
+                  <menu link="option=com_joomdle&amp;view=shop" img="components/com_joomdle/assets/images/icon-16-vmart.png">COM_JOOMDLE_SHOP</menu>
+                  <menu link="option=com_joomdle&amp;view=mailinglist" img="components/com_joomdle/assets/images/icon-16-lists.png">COM_JOOMDLE_MAILING_LIST</menu>
+                  <menu link="option=com_joomdle&amp;view=forums" img="components/com_joomdle/assets/images/icon-16-forum.png">COM_JOOMDLE_FORUMS</menu>
+                  <menu link="option=com_joomdle&amp;view=check" img="components/com_joomdle/assets/images/icon-16-info.png">COM_JOOMDLE_SYSTEM_CHECK</menu>
+    </submenu>
+
+
+    <files folder="com_joomdle/administrator/components/com_joomdle">
+        <filename>config.xml</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>joomdle.php</filename>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>models</folder>
+        <folder>tables</folder>
+        <folder>views</folder>
+        <folder>assets</folder>
+        <folder>fields</folder>
+        <folder>sql</folder>
+    </files>
+
+
+    <languages>
+		<language tag="en-GB">com_joomdle/administrator/language/en-GB/en-GB.com_joomdle.sys.ini</language>
+		<language tag="en-GB">com_joomdle/administrator/language/en-GB/en-GB.com_joomdle.ini</language>
+		<language tag="es-ES">com_joomdle/administrator/language/es-ES/es-ES.com_joomdle.sys.ini</language>
+		<language tag="es-ES">com_joomdle/administrator/language/es-ES/es-ES.com_joomdle.ini</language>
+		<language tag="pt-BR">com_joomdle/administrator/language/pt-BR/pt-BR.com_joomdle.sys.ini</language>
+		<language tag="pt-BR">com_joomdle/administrator/language/pt-BR/pt-BR.com_joomdle.ini</language>
+		<language tag="el-GR">com_joomdle/administrator/language/el-GR/el-GR.com_joomdle.sys.ini</language>
+		<language tag="el-GR">com_joomdle/administrator/language/el-GR/el-GR.com_joomdle.ini</language>
+		<language tag="de-DE">com_joomdle/administrator/language/de-DE/de-DE.com_joomdle.sys.ini</language>
+		<language tag="de-DE">com_joomdle/administrator/language/de-DE/de-DE.com_joomdle.ini</language>
+		<language tag="fr-FR">com_joomdle/administrator/language/fr-FR/fr-FR.com_joomdle.sys.ini</language>
+		<language tag="fr-FR">com_joomdle/administrator/language/fr-FR/fr-FR.com_joomdle.ini</language>
+		<language tag="it-IT">com_joomdle/administrator/language/it-IT/it-IT.com_joomdle.sys.ini</language>
+		<language tag="it-IT">com_joomdle/administrator/language/it-IT/it-IT.com_joomdle.ini</language>
+    </languages>
+
+    </administration>
+
+    <modules>
+	<module module="mod_joomdle_courses" title="Joomdle courses" position="left" order="-1" client="site">
+	<files folder="mod_joomdle_courses">
+		<folder>tmpl</folder>
+                <file>mod_joomdle_courses.php</file>
+                <file>mod_joomdle_courses.xml</file>
+                <file>index.html</file>
+                <file>helper.php</file>
+        </files>
+	<languages folder="mod_joomdle_courses/language">
+		<language tag="en-GB">en-GB.mod_joomdle_courses.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_joomdle_courses.ini</language>
+		<language tag="es-ES">es-ES.mod_joomdle_courses.ini</language>
+		<language tag="pt-BR">pt-BR.mod_joomdle_courses.ini</language>
+		<language tag="de-DE">de-DE.mod_joomdle_courses.ini</language>
+		<language tag="fr-FR">fr-FR.mod_joomdle_courses.ini</language>
+		<language tag="it-IT">it-IT.mod_joomdle_courses.ini</language>
+	</languages>
+	</module>
+
+	<module module="mod_joomdle_my_courses" title="My Joomdle courses" position="left" order="-1" client="site">
+	<files folder="mod_joomdle_my_courses">
+		<folder>tmpl</folder>
+                <file>mod_joomdle_my_courses.php</file>
+                <file>mod_joomdle_my_courses.xml</file>
+                <file>index.html</file>
+                <file>helper.php</file>
+        </files>
+	<languages folder="mod_joomdle_my_courses/language">
+		<language tag="en-GB">en-GB.mod_joomdle_my_courses.ini</language>
+		<language tag="es-ES">es-ES.mod_joomdle_my_courses.ini</language>
+		<language tag="pt-BR">pt-BR.mod_joomdle_my_courses.ini</language>
+		<language tag="de-DE">de-DE.mod_joomdle_my_courses.ini</language>
+		<language tag="fr-FR">fr-FR.mod_joomdle_my_courses.ini</language>
+		<language tag="it-IT">it-IT.mod_joomdle_my_courses.ini</language>
+	</languages>
+	</module>
+
+    </modules>
+ <plugins>
+
+    <plugin folder="plg_joomdlehooks" plugin="joomdlehooks" order="100" group="user">
+            <files folder="plg_joomdlehooks">
+                <file>joomdlehooks.php</file>
+                <file>joomdlehooks.xml</file>
+            </files>
+    <languages folder="plg_joomdlehooks/language">
+        <language tag="es-ES">es-ES.plg_user_joomdlehooks.ini</language>
+        <language tag="en-GB">en-GB.plg_user_joomdlehooks.ini</language>
+        <language tag="de-DE">de-DE.plg_user_joomdlehooks.ini</language>
+        <language tag="fr-FR">fr-FR.plg_user_joomdlehooks.ini</language>
+        <language tag="it-IT">it-IT.plg_user_joomdlehooks.ini</language>
+    </languages>
+    </plugin>
+
+
+
+  <plugin  folder="plg_joomdlesession" plugin="joomdlesession" order="1" group="system">
+            <files folder="plg_joomdlesession">
+                <file>joomdlesession.php</file>
+                <file>joomdlesession.xml</file>
+            </files>
+    </plugin>
+
+    <plugin folder="plg_search_courses" plugin="courses" order="-100" group="search">
+            <files folder="plg_search_courses">
+                <file>courses.php</file>
+                <file>courses.xml</file>
+            </files>
+    <languages folder="plg_search_courses/language">
+        <language tag="es-ES">es-ES.plg_search_courses.ini</language>
+        <language tag="en-GB">en-GB.plg_search_courses.ini</language>
+        <language tag="fr-FR">fr-FR.plg_search_courses.ini</language>
+        <language tag="it-IT">it-IT.plg_search_courses.ini</language>
+    </languages>
+    </plugin>
+
+    <plugin  folder="plg_search_coursecategories" plugin="coursecategories" order="-100" group="search">
+            <files folder="plg_search_coursecategories">
+                <file>coursecategories.php</file>
+                <file>coursecategories.xml</file>
+            </files>
+    <languages folder="plg_search_coursecategories/language">
+        <language tag="es-ES">es-ES.plg_search_coursecategories.ini</language>
+        <language tag="en-GB">en-GB.plg_search_coursecategories.ini</language>
+        <language tag="fr-FR">fr-FR.plg_search_coursecategories.ini</language>
+        <language tag="it-IT">it-IT.plg_search_coursecategories.ini</language>
+    </languages>
+    </plugin>  
+
+ <plugin  folder="plg_search_coursetopics" plugin="coursetopics" order="-100" group="search">
+            <files folder="plg_search_coursetopics">
+                <file>coursetopics.php</file>
+                <file>coursetopics.xml</file>
+            </files>
+    <languages folder="plg_search_coursetopics/language">
+        <language tag="es-ES">es-ES.plg_search_coursetopics.ini</language>
+        <language tag="en-GB">en-GB.plg_search_coursetopics.ini</language>
+        <language tag="fr-FR">fr-FR.plg_search_coursetopics.ini</language>
+        <language tag="it-IT">it-IT.plg_search_coursetopics.ini</language>
+    </languages>
+    </plugin>  
+
+</plugins>  
+
+</extension>

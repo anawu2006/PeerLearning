@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="bundle">
+
+		<field name="name" type="text"
+            description="COM_JOOMDLE_NAME"
+            label="COM_JOOMDLE_NAME"
+        />
+
+		<field name="description" type="textarea"
+            description="COM_JOOMDLE_DESCRIPTION"
+            label="COM_JOOMDLE_DESCRIPTION"
+            rows="5" cols="70"
+        />
+
+		<field name="courses" type="courselist"
+            description="COM_JOOMDLE_COURSES"
+            label="COM_JOOMDLE_COURSES"
+			multiple="true"
+        />
+
+		<field name="cost" type="text"
+            description="COM_JOOMDLE_COST"
+            label="COM_JOOMDLE_COST"
+        />
+
+		<field name="currency" type="currency"
+            description="COM_JOOMDLE_CURRENCY"
+            label="COM_JOOMDLE_CURRENCY"
+        />
+
+        <field
+            name="id"
+            type="hidden"
+            class="readonly"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC"
+            default="0"
+            readonly="true"
+            />
+
+
+
+	</fieldset>
+</form>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general">
+		<field name="MOODLE_URL" type="text" required="true"
+			description="COM_JOOMDLE_MOODLE_SERVER_URL_DESCRIPTION"
+			label="COM_JOOMDLE_MOODLE_SERVER_URL"
+			class="input-xlarge"
+		/>
+
+		<field name="auth_token" type="text"
+			description="COM_JOOMDLE_MOODLE_AUTH_TOKEN_DESCRIPTION"
+			label="COM_JOOMDLE_MOODLE_AUTH_TOKEN"
+			class="input-xlarge"
+		/>
+
+		<field name="connection_method" type="list" label="COM_JOOMDLE_CONNECTION_METHOD"
+            description="COM_JOOMDLE_CONNECTION_METHOD_DESCRIPTION" 
+            size="1" default="fgc"
+        >
+            <option value="fgc">
+                file_get_contents</option>
+            <option value="curl">
+                cURL</option>
+        </field>
+
+		<field name="joomla_auth_token" type="text"
+			description="COM_JOOMDLE_JOOMLA_AUTH_TOKEN_DESCRIPTION"
+			label="COM_JOOMDLE_JOOMLA_AUTH_TOKEN"
+			class="input-xlarge"
+			readonly="true"
+		/>
+
+		<field
+            name="redirectless_sso"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_REDIRECTLESS_SSO"
+            description="COM_JOOMDLE_REDIRECTLESS_SSO_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="redirectless_logout"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_REDIRECTLESS_LOGOUT"
+            description="COM_JOOMDLE_REDIRECTLESS_LOGOUT_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field name="cookie_path" type="text"
+			description="COM_JOOMDLE_MOODLE_COOKIE_PATH_DESCRIPTION"
+			label="COM_JOOMDLE_MOODLE_COOKIE_PATH"
+            default="/"
+		/>
+
+		<field
+            name="auto_create_users"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_AUTO_CREATE_USERS"
+            description="COM_JOOMDLE_AUTO_CREATE_USERS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="auto_delete_users"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_AUTO_DELETE_USERS"
+            description="COM_JOOMDLE_AUTO_DELETE_USERS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="links">
+		<field name="linkstarget" type="list" label="COM_JOOMDLE_OPEN_MOODLE_LINKS"
+            description="COM_JOOMDLE_OPEN_MOODLE_LINKS_DESCRIPTION" 
+            size="1" default="wrapper"
+        >
+            <option value="wrapper">
+                COM_JOOMDLE_WRAPPER</option>
+            <option value="new">
+                COM_JOOMDLE_NEW_WINDOW</option>
+            <option value="self">
+                COM_JOOMDLE_SAME_WINDOW</option>
+        </field>
+
+		<field name="scrolling" type="list" label="COM_JOOMDLE_WRAPPER_SCROLL_BARS"
+            description="COM_JOOMDLE_WRAPPER_SCROLL_BARS_DESCRIPTION" 
+            size="1" default="auto"
+        >
+            <option value="auto">
+                COM_JOOMDLE_AUTO</option>
+            <option value="yes">
+                JYES</option>
+            <option value="no">
+                JNO</option>
+        </field>
+
+		<field name="width" type="text"
+			description="COM_JOOMDLE_WRAPPER_WIDTH_DESCRIPTION"
+			label="COM_JOOMDLE_WRAPPER_WIDTH"
+		/>
+
+		<field name="height" type="text"
+			description="COM_JOOMDLE_WRAPPER_HEIGHT_DESCRIPTION"
+			label="COM_JOOMDLE_WRAPPER_HEIGHT"
+		/>
+
+		<field
+            name="autoheight"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_WRAPPER_AUTOHEIGHT"
+            description="COM_JOOMDLE_WRAPPER_AUTOHEIGHT_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field name="theme" type="theme"
+			description="COM_JOOMDLE_MOODLE_THEME"
+			label="COM_JOOMDLE_MOODLE_THEME"
+		/>
+
+		<field name="default_itemid" type="text"
+			description="COM_JOOMDLE_DEFAULT_ITEMID_DESCRIPTION"
+			label="COM_JOOMDLE_DEFAULT_ITEMID"
+		/>
+
+		<field name="joomdle_itemid" type="text"
+			description="COM_JOOMDLE_JOOMDLE_ITEMID_DESCRIPTION"
+			label="COM_JOOMDLE_JOOMDLE_ITEMID"
+		/>
+
+		<field name="shop_itemid" type="text"
+			description="COM_JOOMDLE_SHOP_ITEMID_DESCRIPTION"
+			label="COM_JOOMDLE_SHOP_ITEMID"
+		/>
+
+		<field name="courseview_itemid" type="text"
+			description="COM_JOOMDLE_COURSEVIEW_ITEMID_DESCRIPTION"
+			label="COM_JOOMDLE_COURSEVIEW_ITEMID"
+		/>
+
+	</fieldset>
+
+	<fieldset name="actionbuttons">
+
+		<field name="free_courses_button" type="list" label="COM_JOOMDLE_SHOW_FREE_COURSES_BUTTON"
+            description="COM_JOOMDLE_SHOW_FREE_COURSES_BUTTON_DESCRIPTION" 
+            size="1" default="enrol"
+        >
+            <option value="0">
+                COM_JOOMDLE_NONE</option>
+            <option value="enrol">
+                COM_JOOMDLE_ENROL_GOTO_BUTTON</option>
+            <option value="goto">
+                COM_JOOMDLE_GOTO_BUTTON</option>
+            <option value="applicate">
+                COM_JOOMDLE_APPLICATE_BUTTON</option>
+        </field>
+
+		<field name="paid_courses_button" type="list" label="COM_JOOMDLE_SHOW_PAID_COURSES_BUTTON"
+            description="COM_JOOMDLE_SHOW_PAID_COURSES_BUTTON_DESCRIPTION" 
+            size="1" default="buy"
+        >
+            <option value="0">
+                COM_JOOMDLE_NONE</option>
+            <option value="buy">
+                COM_JOOMDLE_BUY_BUTTON</option>
+            <option value="paypal">
+                COM_JOOMDLE_PAYPAL_BUTTON</option>
+        </field>
+
+		<field name="goto_course_button" type="list" label="COM_JOOMDLE_GOTO_COURSE_BUTTON"
+            description="COM_JOOMDLE_GOTO_COURSE_BUTTON_DESCRIPTION" 
+            size="1" default="moodle"
+        >
+            <option value="0">
+                COM_JOOMDLE_NONE</option>
+            <option value="moodle">
+                COM_JOOMDLE_MOODLE</option>
+            <option value="courseview">
+                COM_JOOMDLE_COURSE_VIEW</option>
+        </field>
+
+	</fieldset>
+
+	<fieldset name="detailview">
+
+		<field
+            name="show_detail_category"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_CATEGORY"
+            description="COM_JOOMDLE_SHOW_CATEGORY_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_summary"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_SUMMARY"
+            description="COM_JOOMDLE_SHOW_SUMMARY_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_language"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_LANGUAGE"
+            description="COM_JOOMDLE_SHOW_LANGUAGE_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_startdate"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_START_DATE"
+            description="COM_JOOMDLE_SHOW_START_DATE_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_enroldates"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_ENROL_DATES"
+            description="COM_JOOMDLE_SHOW_ENROL_DATES_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_enrolperiod"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_ENROL_PERIOD"
+            description="COM_JOOMDLE_SHOW_ENROL_PERIOD_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_topicsnumber"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_TOPICS_NUMBER"
+            description="COM_JOOMDLE_SHOW_TOPICS_NUMBER"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_detail_cost"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_COST"
+            description="COM_JOOMDLE_SHOW_COST"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_contents_link"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_CONTENT_LINKS"
+            description="COM_JOOMDLE_SHOW_CONTENT_LINKS"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_topìcs_link"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_TOPICS_LINKS"
+            description="COM_JOOMDLE_SHOW_TOPICS_LINKS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_grading_system_link"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_GRADING_SYSTEM_LINKS"
+            description="GRADING_SYSTEM_LINKS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="show_teachers_link"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_TEACHERS_LINKS"
+            description="COM_JOOMDLE_SHOW_TEACHERS_LINKS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+
+	</fieldset>
+
+	<fieldset name="topicsview">
+		<field
+            name="topics_show_numbers"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_TOPICS_NUMBERS"
+            description="COM_JOOMDLE_SHOW_TOPICS_NUMBERS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="coursecategoryview">
+		<field
+            name="coursecategory_show_category_info"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_CATEGORY_INFO"
+            description="COM_JOOMDLE_SHOW_CATEGORY_INFO_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="coursecategory_show_buttons"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_BUTTONS"
+            description="COM_JOOMDLE_SHOW_BUTTONS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+	</fieldset>
+
+	<fieldset name="courseview">
+		<field
+            name="course_show_numbers"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SHOW_TOPICS_NUMBERS"
+            description="COM_JOOMDLE_SHOW_TOPICS_NUMBERS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="course_show_summary"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_TOPICS_SUMMARY"
+            description="COM_JOOMDLE_SHOW_TOPICS_SUMMARY_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="use_page_view"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_USE_PAGE_VIEW"
+            description="COM_JOOMDLE_USE_PAGE_VIEW_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="use_kunena_forums"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_USE_KUNENA_FORUMS"
+            description="COM_JOOMDLE_USE_KUNENA_FORUMS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+	</fieldset>
+
+	<fieldset name="coursesabcview">
+		<field
+            name="coursesabc_show_buttons"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_BUTTONS"
+            description="COM_JOOMDLE_SHOW_BUTTONS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="backlinks">
+		<field
+            name="show_back_links"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SHOW_BACK_LINKS"
+            description="COM_JOOMDLE_SHOW_BACK_LINKS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="shop">
+		<field name="shop_integration" type="shop"
+			description="COM_JOOMDLE_SHOP_INTEGRATION_DESCRIPTION"
+			label="COM_JOOMDLE_SHOP_INTEGRATION"
+		/>
+
+		<field name="courses_category" type="text"
+			description="COM_JOOMDLE_SHOP_CATEGORY_FOR_COURSES_DESCRIPTION"
+			label="COM_JOOMDLE_SHOP_CATEGORY_FOR_COURSES"
+		/>
+
+		<field
+            name="buy_for_children"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_BUY_FOR_CHILDREN"
+            description="COM_JOOMDLE_BUY_FOR_CHILDREN_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="assign_courses_include_parent"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_ASSIGN_COURSES_INCLUDE_PARENT"
+            description="COM_JOOMDLE_ASSIGN_COURSES_INCLUDE_PARENT_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field
+            name="send_enrol_emails"
+            type="radio"
+            class="btn-group"
+            default="1"
+            label="COM_JOOMDLE_SEND_ENROL_EMAILS"
+            description="COM_JOOMDLE_SEND_ENROL_EMAILS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field name="enrol_email_subject" type="text"
+			description="COM_JOOMDLE_ENROL_EMAIL_SUBJECT_DESCRIPTION"
+			label="COM_JOOMDLE_ENROL_EMAIL_SUBJECT"
+			class="input-xlarge"
+		/>
+
+		<field name="enrol_email_text" type="textarea"
+			description="COM_JOOMDLE_ENROL_EMAIL_TEXT_DESCRIPTION"
+			label="COM_JOOMDLE_ENROL_EMAIL_TEXT"
+			rows="5" cols="70"
+		/>
+
+		<field
+            name="send_bundle_emails"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_SEND_BUNDLE_EMAILS"
+            description="COM_JOOMDLE_SEND_BUNDLE_EMAILS_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="datasource">
+		<field name="additional_data_source" type="datasource"
+			description="COM_JOOMDLE_ADDITIONAL_DATA_SOURCE_DESCRIPTION"
+			label="COM_JOOMDLE_ADDITIONAL_DATA_SOURCE"
+		/>
+
+		<field name="j16_form_path" type="text"
+			description="COM_JOOMDLE_J16_FORM_PATH_DESCRIPTION"
+			label="COM_JOOMDLE_J16_FORM_PATH"
+		/>
+
+		<field name="j16_profile_plugin" type="text"
+			description="COM_JOOMDLE_J16_PROFILE_PLUGIN_DESCRIPTION"
+			label="COM_JOOMDLE_J16_PROFILE_PLUGIN"
+		/>
+
+	</fieldset>
+
+	<fieldset name="mailinglist">
+		<field name="mailing_list_integration" type="list" label="COM_JOOMDLE_MAILING_LIST_INTEGRATION"
+            description="COM_JOOMDLE_MAILING_LIST_INTEGRATION_DESCRIPTION" 
+            size="1" default="no"
+        >
+            <option value="no">
+                COM_JOOMDLE_NONE</option>
+            <option value="acymailing">
+                Acymailing</option>
+        </field>
+
+	</fieldset>
+
+	<fieldset name="courseapplications">
+		<field name="applications_max" type="text"
+			description="COM_JOOMDLE_APPLICATION_MAX_DESCRIPTION"
+			label="COM_JOOMDLE_APPLICATION_MAX"
+		/>
+
+		<field name="show_detail_application_motivation" type="list" label="COM_JOOMDLE_REQUEST_MOTIVATION"
+            description="COM_JOOMDLE_REQUEST_MOTIVATION_DESCRIPTION" 
+            size="1" default="no"
+        >
+            <option value="no">
+                JNO</option>
+            <option value="optional">
+                COM_JOOMDLE_SHOW_OPTIONAL</option>
+            <option value="mandatory">
+                COM_JOOMDLE_SHOW_MANDATORY</option>
+        </field>
+
+		<field name="show_detail_application_experience" type="list" label="COM_JOOMDLE_REQUEST_EXPERIENCE"
+            description="COM_JOOMDLE_REQUEST_EXPERIENCE_DESCRIPTION" 
+            size="1" default="no"
+        >
+            <option value="no">
+                JNO</option>
+            <option value="optional">
+                COM_JOOMDLE_SHOW_OPTIONAL</option>
+            <option value="mandatory">
+                COM_JOOMDLE_SHOW_MANDATORY</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="usergroups">
+		<field name="joomlagroups_teachers" type="usergroup"
+			description="COM_JOOMDLE_TEACHER_GROUP_DESCRIPTION"
+			label="COM_JOOMDLE_TEACHER_GROUP"
+		/>
+
+		<field name="joomlagroups_students" type="usergroup"
+			description="COM_JOOMDLE_STUDENT_GROUP_DESCRIPTION"
+			label="COM_JOOMDLE_STUDENT_GROUP"
+		/>
+	</fieldset>
+
+    <fieldset name="userpoints">
+        <field name="user_points" type="points" label="COM_JOOMDLE_USER_POINTS"
+            description="COM_JOOMDLE_POINTS_INTEGRATION" 
+            size="1" default="no"
+        />
+    </fieldset>
+
+    <fieldset name="activities">
+        <field name="activities" type="activities" label="COM_JOOMDLE_ACTIVITIES"
+            description="COM_JOOMDLE_ACTIVITIES_INTEGRATION" 
+            size="1" default="no"
+        />
+    </fieldset>
+
+    <fieldset name="profiletypes">
+        <field name="use_profiletypes" type="profiletypes" label="COM_JOOMDLE_USE_CUSTOM_PROFILES"
+            description="COM_JOOMDLE_USE_CUSTOM_PROFILES_DESCRIPTION" 
+            size="1" default="0"
+        />
+
+        <field name="children_profiletype" type="Profiletype"
+            description="COM_JOOMDLE_CHILDREN_PROFILE_TYPE_DESCRIPTION"
+            label="COM_JOOMDLE_CHILDREN_PROFILE_TYPE"
+        />
+    </fieldset>
+
+    <fieldset name="socialgroups">
+        <field name="socialgroups" type="socialgroups" label="COM_JOOMDLE_SOCIAL_GROUPS"
+            description="COM_JOOMDLE_SOCIAL_GROUPS_DESCRIPTION" 
+            size="1" default="no"
+        />
+
+		<field
+            name="jomsocial_groups_category"
+            type="text"
+            default="1"
+            label="COM_JOOMDLE_JOMSOCIAL_GROUPS_CATEGORY"
+            description="COM_JOOMDLE_JOMSOCIAL_GROUPS_CATEGORY_DESCRIPTION"
+            filter="integer">
+        </field>
+    </fieldset>
+
+	<fieldset name="pdf">
+		<field
+            name="use_pdf_integration"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_USE_PDF_INTEGRATION"
+            description="COM_JOOMDLE_USE_PDF_INTEGRATION_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+	</fieldset>
+
+	<fieldset name="kunena">
+		<field
+            name="courses_forum_category"
+            type="text"
+            default="0"
+            label="COM_JOOMDLE_MAIN_COURSE_FORUMS_CATEGORY"
+            description="COM_JOOMDLE_MAIN_COURSE_FORUMS_CATEGORY_DESCRIPTION"
+            filter="integer">
+        </field>
+	</fieldset>
+
+</form>

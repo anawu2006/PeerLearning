@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_CHIDLRENGRADES_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_CHIDLRENGRADES_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_CHIDLRENGRADES_LAYOUT</name>
+		<description>COM_JOOMDLE_CHIDLRENGRADES_LAYOUT_DESCRIPTION</description>
+
+		<config><fields name="params"><fieldset name="basic">
+            <field name="layout" type="radio" default="basic" label="COM_JOOMDLE_LAYOUT" description="COM_JOOMDLE_LAYOUT_DESCRIPTION">
+                                <option value="basic">Basic</option>
+                                <option value="gradebook">Gradebook</option>
+                        </field>
+            </fieldset></fields></config>
+
+	</state>
+</metadata>

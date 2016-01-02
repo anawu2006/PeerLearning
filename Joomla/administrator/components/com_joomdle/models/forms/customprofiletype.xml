@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="customprofiletype">
+		<field name="name" type="text"
+			description="COM_JOOMDLE_PROFILE_TYPE_DESCRIPTION"
+			label="COM_JOOMDLE_PROFILE_TYPE"
+            class="readonly"
+            readonly="true"
+		/>
+
+		<field
+            name="create_on_moodle"
+            type="radio"
+            class="btn-group"
+            default="0"
+            label="COM_JOOMDLE_CREATE_ON_MOODLE"
+            description="COM_JOOMDLE_CREATE_ON_MOODLE_DESCRIPTION"
+            filter="integer">
+            <option
+                value="1">JYES</option>
+            <option
+                value="0">JNO</option>
+        </field>
+
+		<field name="moodle_role" type="role"
+			description="COM_JOOMDLE__ROLE_DESCRIPTION"
+			label="COM_JOOMDLE_ROLE"
+		/>
+
+		<field
+            name="id"
+            type="hidden"
+            class="readonly"
+            label="JGLOBAL_FIELD_ID_LABEL"
+            description ="JGLOBAL_FIELD_ID_DESC"
+            default="0"
+            readonly="true"
+            />
+
+	</fieldset>
+</form>

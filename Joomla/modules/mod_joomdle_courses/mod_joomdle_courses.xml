@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>Joomdle courses</name>
+	<author>Antonio Duran</author>
+	<creationDate>October 2009</creationDate>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>antonio.duran.terres@gmail.com</authorEmail>
+	<authorUrl>www.joomdle.com</authorUrl>
+	<version>1.0</version>
+	<description>Joomdle courses</description>
+	<files>
+		<filename module="mod_joomdle_courses">mod_joomdle_courses.php</filename>
+		<filename module="mod_joomdle_courses">index.html</filename>
+		<filename module="mod_joomdle_courses">helper.php</filename>
+		<filename module="mod_joomdle_courses">tmpl/default.php</filename>
+
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_joomdle_courses.sys.ini</language>
+		<language tag="en-GB">language/en-GB.mod_joomdle_courses.ini</language>
+		<language tag="es-ES">language/es-ES.mod_joomdle_courses.ini</language>
+		<language tag="pt-BR">language/pt-BR.mod_joomdle_courses.ini</language>
+		<language tag="de-DE">language/de-DE.mod_joomdle_courses.ini</language>
+		<language tag="fr-FR">language/fr-FR.mod_joomdle_courses.ini</language>
+		<language tag="it-IT">language/it-IT.mod_joomdle_courses.sys.ini</language>
+		<language tag="it-IT">language/it-IT.mod_joomdle_courses.ini</language>
+	</languages>
+<config><fields name="params"><fieldset name="basic">
+		<field name="linkto" type="list" default="description" label="COM_JOOMDLE_LINKTO" description="COM_JOOMDLE_LINKTO_DESCRIPTION">
+			<option value="moodle">Moodle course</option>
+			<option value="description">Course description</option>
+		</field>
+		<field name="guest courses only" type="list" default="0" label="COM_JOOMDLE_GUEST_COURSES_ONLY" description="COM_JOOMDLE_GUEST_COURSES_ONLY_DESCRIPTION">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="free courses only" type="list" default="0" label="COM_JOOMDLE_FREE_COURSES_ONLY" description="COM_JOOMDLE_FREE_COURSES_ONLY_DESCRIPTION">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		<field name="sort_by" type="list" default="name" label="COM_JOOMDLE_SORT_BY" description="COM_JOOMDLE_SORT_BY_DESCRIPTION">
+			<option value="name">Name</option>
+			<option value="date">Date</option>
+			<option value="sortorder">Moodle Sortorder</option>
+		</field>
+		<field name="latest courses only" type="text" size="3" default="" label="COM_JOOMDLE_LATEST_COURSES_ONLY" description="COM_JOOMDLE_LATEST_COURSES_ONLY_DESCRIPTION" />
+
+<field name="courses_shown" multiple="multiple" type="courselist" size="5" default="" label="COM_JOOMDLE_SELECT_COURSES" description="COM_JOOMDLE_SELECT_COURSES_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields"/>
+
+<field name="categories_shown" type="coursecategorylist" default="" multiple="multiple" label="COM_JOOMDLE_SELECT_CATEGORIES"  description="COM_JOOMDLE_SELECT_CATEGORIES_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields" />
+	<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+
+	</fieldset></fields></config>
+</extension>

@@ -1,0 +1,240 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * Joomdle config form
+ *
+ * @package    auth_joomdle
+ * @copyright  2009 Qontori Pte Ltd
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+$joomla_url = get_config('auth/joomdle', 'joomla_url');
+if ($joomla_url == '')
+{
+	// Check if old config is present, and use it
+	$joomla_url = get_config('', 'joomla_url');
+}
+// set to defaults if undefined
+if (!isset($joomla_url)) {
+		$joomla_url = '';
+}
+
+$connection_method = get_config('auth/joomdle', 'connection_method');
+if (!isset($connection_method))
+	$connection_method = 'fgc';
+
+$cms = array ( 'fgc' => 'file_get_contents', 'curl' => 'cURL' );
+
+$joomla_auth_token = get_config('auth/joomdle', 'joomla_auth_token');
+if (!isset($joomla_auth_token))
+	$joomla_auth_token = '';
+$sync_to_joomla = get_config('auth/joomdle', 'sync_to_joomla');
+if (!isset($sync_to_joomla))
+	$sync_to_joomla = 0;
+$joomla_lang = get_config('auth/joomdle', 'joomla_lang');
+if (!isset($joomla_lang))
+    $joomla_lang = "";
+$joomla_sef = get_config('auth/joomdle', 'joomla_sef');
+if (!isset($joomla_sef))
+    $joomla_sef = "";
+$jomsocial_activities = get_config('auth/joomdle', 'jomsocial_activities');
+if (!isset($jomsocial_activities))
+	$jomsocial_activities = 0;
+$jomsocial_groups = get_config('auth/joomdle', 'jomsocial_groups');
+if (!isset($jomsocial_groups))
+	$jomsocial_groups = 0;
+$jomsocial_groups_delete = get_config('auth/joomdle', 'jomsocial_groups_delete');
+if (!isset($jomsocial_groups_delete))
+	$jomsocial_groups_delete = 0;
+$auto_sell = get_config('auth/joomdle', 'auto_sell');
+if (!isset($auto_sell))
+	$auto_sell = 0;
+$enrol_parents = get_config('auth/joomdle', 'enrol_parents');
+if (!isset($enrol_parents))
+	$enrol_parents = 0;
+$parent_role_id = get_config('auth/joomdle', 'parent_role_id');
+if (!isset($parent_role_id))
+	$parent_role_id = '';
+$give_points = get_config('auth/joomdle', 'give_points');
+if (!isset($give_points))
+	$give_points = 0;
+$auto_mailing_lists = get_config('auth/joomdle', 'auto_mailing_lists');
+if (!isset($auto_mailing_lists))
+	$auto_mailing_lists = 0;
+$joomla_user_groups = get_config('auth/joomdle', 'joomla_user_groups');
+if (!isset($joomla_user_groups))
+	$joomla_user_groups = 0;
+$use_kunena_forums = get_config('auth/joomdle', 'use_kunena_forums');
+if (!isset($use_kunena_forums))
+	$use_kunena_forums = 0;
+$redirectless_sso = get_config('auth/joomdle', 'redirectless_sso');
+if (!isset($redirectless_sso))
+	$redirectless_sso = 0;
+$logout_redirect_to_joomla = get_config('auth/joomdle', 'logout_redirect_to_joomla');
+if (!isset($logout_redirect_to_joomla))
+	$logout_redirect_to_joomla = 0;
+
+$yesno = array(get_string('no'), get_string('yes'));
+
+?>
+<table cellspacing="0" cellpadding="5" border="0">
+
+<tr valign="top" class="required">
+    <td align="right"><label for="joomla_url"> <?php print_string("auth_joomla_url", "auth_joomdle") ?></label></td>
+    <td>
+        <input id="joomla_url" name="joomla_url" type="text" size="30" value="<?php echo $joomla_url ?>" />
+
+    </td>
+    <td><?php print_string("auth_joomla_url_desc", "auth_joomdle") ?></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="joomla_auth_token"> <?php print_string("auth_joomla_joomla_auth_token", "auth_joomdle") ?></label></td>
+    <td>
+        <input id="joomla_auth_token" name="joomla_auth_token" type="text" size="30" value="<?php echo $joomla_auth_token ?>" />
+    </td>
+    <td><?php print_string("auth_joomla_joomla_auth_token_description", "auth_joomdle") ?></td>
+</tr>
+
+<tr>
+	<td align="right"><label for="menuconnection_method"><?php print_string('auth_joomla_connection_method', 'auth_joomdle') ?></label></td>
+	<td>
+	<?php //choose_from_menu($cms, 'connection_method', $connection_method, ''); ?>
+	<?php echo html_writer::select($cms, 'connection_method', $connection_method, ''); ?>
+	</td>
+	<td><?php print_string('auth_joomla_connection_method_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+	<td align="right"><label for="menusync_to_joomla"><?php print_string('auth_joomla_sync_to_joomla', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'sync_to_joomla', $sync_to_joomla, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_sync_to_joomla_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="menujoomla_lang"><?php print_string('auth_joomla_joomla_lang', 'auth_joomdle') ?></label></td>
+    <td>
+        <input id="joomla_lang" name="joomla_lang" type="text" size="5" value="<?php echo $joomla_lang ?>" />
+    </td>
+    <td><?php print_string('auth_joomla_joomla_lang_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="menujoomla_sef"><?php print_string('auth_joomla_joomla_sef', 'auth_joomdle') ?></label></td>
+    <td>
+		<?php echo html_writer::select($yesno, 'joomla_sef', $joomla_sef, false); ?>
+    </td>
+    <td><?php print_string('auth_joomla_joomla_sef_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="menujoomla_redirecless"><?php print_string('auth_joomla_redirectless_sso', 'auth_joomdle') ?></label></td>
+    <td>
+		<?php echo html_writer::select($yesno, 'redirectless_sso', $redirectless_sso, false); ?>
+    </td>
+    <td><?php print_string('auth_joomla_redirectless_sso_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="menulogout_redirect_to_joomla"><?php print_string('auth_joomla_logout_redirect_to_joomla', 'auth_joomdle') ?></label></td>
+    <td>
+		<?php echo html_writer::select($yesno, 'logout_redirect_to_joomla', $logout_redirect_to_joomla, false); ?>
+    </td>
+    <td><?php print_string('auth_joomla_logout_redirect_to_joomla_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+	<td align="right"><label for="menujomsocial_activities"><?php print_string('auth_joomla_jomsocial_activities', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'jomsocial_activities', $jomsocial_activities, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_jomsocial_activities_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menujomsocial_groups"><?php print_string('auth_joomla_jomsocial_groups', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'jomsocial_groups', $jomsocial_groups, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_jomsocial_groups_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menujomsocial_groups_delete"><?php print_string('auth_joomla_jomsocial_groups_delete', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'jomsocial_groups_delete', $jomsocial_groups_delete, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_jomsocial_groups_delete_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menuauto_sell"><?php print_string('auth_joomla_auto_sell', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'auto_sell', $auto_sell, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_auto_sell_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menuenrol_parents"><?php print_string('auth_joomla_enrol_parents', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'enrol_parents', $enrol_parents, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_enrol_parents_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+    <td align="right"><label for="parent_role_id"> <?php print_string("auth_joomla_parent_role_id", "auth_joomdle") ?></label></td>
+    <td>
+        <input id="parent_role_id" name="parent_role_id" type="text" size="3" value="<?php echo $parent_role_id ?>" />
+    </td>
+    <td><?php print_string("auth_joomla_parent_role_id_description", "auth_joomdle") ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menugive_points"><?php print_string('auth_joomla_give_points', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'give_points', $give_points, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_give_points_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menuauto_mailing_lists"><?php print_string('auth_joomla_auto_mailing_lists', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'auto_mailing_lists', $auto_mailing_lists, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_auto_mailing_lists_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menujoomla_user_groups"><?php print_string('auth_joomla_joomla_user_groups', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'joomla_user_groups', $joomla_user_groups, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_joomla_user_groups_description', 'auth_joomdle') ?></td>
+</tr>
+<tr>
+	<td align="right"><label for="menuuse_kunena_forums"><?php print_string('auth_joomla_use_kunena_forums', 'auth_joomdle') ?></label></td>
+	<td>
+		<?php echo html_writer::select($yesno, 'use_kunena_forums', $use_kunena_forums, false); ?>
+	</td>
+	<td><?php print_string('auth_joomla_use_kunena_forums_description', 'auth_joomdle') ?></td>
+</tr>
+
+<tr>
+<td>
+<?php print_auth_lock_options('joomdle', $user_fields, get_string('auth_fieldlocks_help', 'auth'), false, false); ?>
+
+
+</td>
+</tr>
+</table>

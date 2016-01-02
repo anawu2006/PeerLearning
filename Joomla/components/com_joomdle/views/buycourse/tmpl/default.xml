@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_BUYCOURSE_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_BUYCOURSE_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_BUYCOURSE_LAYOUT_DESCRIPTION</name>
+		<description>COM_JOOMDLE_BUYCOURSE_LAYOUT_DESCRIPTION</description>
+		<config><fields name="params"><fieldset name="basic">
+			<field name="course_id" type="course" default="" disable="separator" label="COM_JOOMDLE_COURSE" description="COM_JOOMDLE_COURSE_DESCRIPTION" addfieldpath="/administrator/components/com_joomdle/fields" />
+		</fieldset></fields></config>
+		<advanced>
+
+		</advanced>
+	</state>
+</metadata>

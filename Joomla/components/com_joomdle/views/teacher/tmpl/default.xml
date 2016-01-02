@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JOOMDLE_TEACHER_LAYOUT">
+		<message>
+			<![CDATA[COM_JOOMDLE_TEACHER_LAYOUT_DESCRIPTION]]>
+		</message>
+	</layout>
+	<state>
+		<name>COM_JOOMDLE_TEACHER_LAYOUT</name>
+		<description>COM_JOOMDLE_TEACHER_LAYOUT_DESCRIPTION</description>
+		  <config><fields name="params"><fieldset name="basic">
+             <field type="text" name="username" cols="30" rows="3" label="COM_JOOMDLE_TEACHER_USERNAME" description="COM_JOOMDLE_TEACHER_USERNAME" />
+         </fieldset></fields></config>
+
+		<advanced>
+
+		</advanced>
+	</state>
+</metadata>

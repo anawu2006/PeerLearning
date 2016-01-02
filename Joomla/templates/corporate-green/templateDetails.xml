@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>corporate-green</name>
+	<version>1.0</version>
+	<creationDate>4 October 2014</creationDate>
+	<author>Philip Locke</author>
+	<authorEmail>phil@joostrap.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>TPL_CORPORATE-GREEN_XML_DESCRIPTION</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>functions</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+	</files>
+	<positions>
+		<position>menu</position>
+		<position>search</position>
+		<position>header</position>
+		<position>left</position>
+		<position>right</position>
+		<position>boxes</position>
+		<position>top</position>
+		<position>middle</position>
+		<position>bottom</position>
+		<position>debug</position>
+		<position>footer</position>
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_corporate-green.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_corporate-green.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+				
+			<fieldset name="advanced">
+				<field name="logoFile" class="" type="media" default=""
+					label="TPL_CORPORATE-GREEN_LOGO_LABEL"
+					description="TPL_CORPORATE-GREEN_LOGO_DESC" />
+					
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+				<field name="googleFont"
+					type="radio"
+					class="btn-group btn-group-yesno"
+					default="1"
+					label="TPL_CORPORATE-GREEN_FONT_LABEL"
+					description="TPL_CORPORATE-GREEN_FONT_DESC"
+				>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="googleFontName" class="" type="text" default="Open+Sans"
+					label="TPL_CORPORATE-GREEN_FONT_NAME_LABEL"
+					description="TPL_CORPORATE-GREEN_FONT_NAME_DESC" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

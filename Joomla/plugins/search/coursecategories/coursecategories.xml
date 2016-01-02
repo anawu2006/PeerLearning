@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="search" client="site" method="upgrade">
+	<name>Search - Joomdle Course Categories</name>
+	<author>Antonio Duran Terres</author>
+	<creationDate>February 2009</creationDate>
+	<copyright>Copyright (C) 2009 - 2010 Antonio Duran Terres</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>antonio.duran.terres@gmail.com</authorEmail>
+	<authorUrl>joomdle.com</authorUrl>
+	<version>1.0</version>
+	<description>COM_JOOMDLE_PLG_SEARCH_COURSECATEGORIES_DESCRIPTION</description>
+	<files>
+		<filename plugin="coursecategories">coursecategories.php</filename>
+	</files>
+	<languages folder="language">
+                <language tag="es-ES">es-ES.plg_search_coursecategories.ini</language>
+                <language tag="en-GB">en-GB.plg_search_coursecategories.ini</language>
+                <language tag="fr-FR">fr-FR.plg_search_coursecategories.ini</language>
+                <language tag="ro-RO">ro-RO.plg_search_coursecategories.ini</language>
+                <language tag="de-DE">de-DE.plg_search_coursecategories.ini</language>
+                <language tag="it-IT">it-IT.plg_search_coursecategories.ini</language>
+        </languages>
+	<config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text"
+                    default="50"
+                    description="COM_JOOMDLE_SEARCH_LIMIT_DESCRIPTION"
+                    label="COM_JOOMDLE_SEARCH_LIMIT"
+                    size="5"
+                />
+
+            </fieldset>
+        </fields>
+    </config>
+
+</extension>
