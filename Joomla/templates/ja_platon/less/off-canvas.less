@@ -1,0 +1,219 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+
+// VARIABLES & MIXINS
+// ------------------
+@import "vars.less"; // Include Variables and Mixins
+
+
+// EXTEND STYLE IN BASE
+// --------------------
+@import "../../../plugins/system/t3/base-bs3/less/off-canvas.less";
+
+
+
+//
+// OFF-CANVAS
+// -------------------------------------
+
+// Toggle Button
+// -------------------
+.off-canvas-toggle {
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  width: @navbar-height;
+  height: @navbar-height;
+  line-height: @navbar-height;
+  float: right;
+
+  @media (max-width: @screen-xs-max) {
+    width: @navbar-height/2;
+    height: @navbar-height/2;
+    line-height: @navbar-height/2;
+    margin-top: @navbar-height/4;
+    margin-right: 10px;
+  }
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+
+//
+// OFF-CANVAS CONTENT STYLES
+// -------------------------------------
+.t3-off-canvas {
+
+  // Generic
+  // -----------------------------------
+  background: @t3-off-canvas-background;
+  color: @t3-off-canvas-text-color;
+
+
+  // Header
+  // -----------------------------------
+  .t3-off-canvas-header {
+    background: @t3-off-canvas-header-background;
+    color: @t3-off-canvas-header-text-color;
+    padding: 0 0 0 @padding-base-horizontal;
+    height: 40px;
+
+    // Title
+    h2 {
+      margin: 0;
+      line-height: 40px;
+      font-size: @font-size-base;
+      font-weight: @font-weight-500;
+      text-transform: uppercase;
+    }
+
+  }
+
+  // Close Button
+  .close {
+    margin: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    background: darken(@t3-off-canvas-header-background, 20%);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+
+  // Body
+  // -----------------------------------
+  .t3-off-canvas-body {
+
+    padding: (@padding-base-vertical * 4)  @padding-base-horizontal;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      padding-bottom: (@padding-base-vertical * 8)
+    }
+
+    // Links
+    // ------------
+    a {
+      color: @t3-off-canvas-link-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: @t3-off-canvas-link-hover-color;
+        text-decoration: none;
+      }
+
+      &:focus {
+        .tab-focus();
+      }
+    }
+
+
+    // Navigations
+    // ------------
+    .nav {
+    }
+
+    // Pills
+    // -----
+    .nav-pills {
+      > li {
+        font-size: @t3-font-size-small;
+        margin: 0;
+
+        // Links rendered as pills
+        > a {
+          text-transform: uppercase;
+          font-weight: @font-weight-500;
+          padding: @t3-global-padding/2 0;
+
+          .caret {
+            border-bottom-color: @t3-off-canvas-link-color;
+            border-top-color: @t3-off-canvas-link-color;
+            margin-left: @t3-global-margin/4;
+          }
+
+          &:hover,
+          &:focus {
+            background: none;
+            color: @link-hover-color;
+
+            .caret {
+              border-bottom-color: @link-hover-color;
+              border-top-color: @link-hover-color;
+            }
+          }
+        }
+
+        + li {
+          border-top: 1px solid @gray-darker;
+        }
+
+        // Active state
+        &.active > a {
+          &,
+          &:hover,
+          &:focus {
+            background: none;
+            color: @link-hover-color;
+
+            // The caret
+            .caret {
+            }
+          }
+        }
+
+      }
+
+      // End
+    }
+
+    // Dropdown Menu
+    .dropdown-menu {
+      background: none;
+      margin: 0;
+      padding: @t3-global-padding/2 0;
+      border-top: 1px solid @gray-darker;
+      font-size: @t3-font-size-small;
+
+      li > a {
+
+        &:hover,
+        &:focus {
+          background: none;
+          color: @link-hover-color;
+        }
+      }
+    }
+
+    .dropdown-menu .active a {
+      background: transparent;
+      color: @link-hover-color;
+    }
+
+
+    // Modules
+    // ------------
+    .t3-module {
+      margin-bottom: @line-height-computed;
+    }
+
+    .module-ct {
+      padding: 0;
+    }
+
+    .module-title  {
+      margin-bottom: @line-height-computed / 2;
+    }
+
+  // End Off-Canvas Body
+  }
+
+// End Off-Canvas Content Styles
+}

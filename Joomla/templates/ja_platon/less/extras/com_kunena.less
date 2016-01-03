@@ -1,0 +1,1018 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+
+// VARIABLES & MIXINS
+// ------------------
+@import "../vars.less"; // Modify this for custom colors, font-sizes, etc
+
+@kborder-color: lighten(@gray-light, 28%);
+
+#Kunena {
+  select {
+    border-radius: 0;
+    display: inline-block;
+    height: 42px;
+    padding: 5px;
+
+    &:hover,
+    &:focus {
+      padding: 5px;
+    }
+  }
+
+  .kbutton,
+  .kbutton:hover,
+  .kbutton:focus {
+    background-color: @gray;
+    color: @white;
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-base;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    .button-size((@padding-base-vertical - 2); @padding-base-horizontal; @font-size-small; @line-height-computed; @border-radius-base);
+  }
+
+  td, p, div {
+    font-family: @font-family-base;
+  }
+
+  div.kmoderatorslist-jump form#jumpto {
+    margin: 0;
+  }
+
+  // Pagination
+  ul.kpagination {
+    display: block;
+    float: right;
+
+    span, a:link, a:visited {
+      border: 1px solid @kborder-color;
+      color: @text-color !important;
+      font-weight: 600;
+      margin: 0 3px;
+      padding: 5px 10px;
+    }
+
+    a:hover, a:focus {
+      background-color: @gray-lighter !important;
+      color: @link-hover-color !important;
+    }
+
+    span {
+      background-color: @gray;
+      border-color: @gray;
+      color: @white !important;
+    }
+  }
+
+  // Knew char
+  .knewchar {
+    background-color: @red;
+    border-radius: 2px;
+    color: @white;
+    font-family: Arial, sans-serif;
+    font-size: 8px !important;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-top: 0;
+    padding: 2px 4px;
+  }
+
+  // Kactions
+  div.kblock div.kactions a {
+    color: @gray!important;
+  }
+
+  .klist-pages-all {
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      height: 55px;
+    }
+  }
+
+  .klist-times-all {
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      height: auto;
+    }
+  }
+
+  // Favorite
+  div.kfavorite {
+    margin: -18px 4px 0;
+  }
+
+  // KUNENA MAIN NAVIGATION
+  // -------------------------------------------------
+  div#ktop {
+    border-color: @brand-primary;
+
+    #ktab {
+      margin-right: 0;
+
+      ul li {
+        a {
+          background-color: #2d2d2d !important;
+          border-radius: 0;
+          color: @gray-light;
+          padding: (@t3-global-padding / 1.5);
+
+          span {
+            font-family: @font-family-sans-serif;
+            font-size: @font-size-small;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+          }
+
+          // Hover states
+          &:hover, &:focus, &:active {
+            background-color: @gray-darker !important;
+            color: @white;
+
+            span {
+              background-color: transparent !important;
+            }
+          }
+        }
+
+        &.active a {
+          background-color: @brand-primary !important;
+          color: @white;
+
+          span {
+            color: @white !important;
+          }
+        }
+      }
+    }
+  }
+
+  // PROFILE BOX
+  // -------------------------------------------------
+  .kprofilebox {
+    .kprofileboxcnt {
+      background-color: @gray-lighter;
+      padding: (@t3-global-padding / 1.5);
+
+      .k_guest {
+        display: block;
+        margin-bottom: @t3-global-margin / 2;
+      }
+
+      .input span {
+        display: inline-block;
+        margin-right: @t3-global-margin / 2;
+
+        // Tablet/medium desktop view
+        @media (max-width: @screen-lg-max) {
+          display: block;
+          margin-right: 0;
+          margin-bottom: @t3-global-margin / 2;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          border-radius: 0;
+          box-shadow: none;
+          display: inline-block;
+          padding: @t3-global-padding / 4;
+        }
+      }
+
+      .klink-block {
+        padding-top: @t3-global-padding / 2;
+
+        span {
+          // Mobile view
+          @media (max-width: @screen-xs-max) {
+            display: block;
+          }
+        }
+        
+        a {
+          color: @gray-light;
+          margin-right: 10px;
+
+          &:hover, &:focus, &:active {
+            color: @link-hover-color;
+          }
+        }
+      }
+
+      ul.kprofilebox-welcome input.kbutton {
+        position: static;
+      }
+    }
+  }
+
+  div#kprofile-leftcol {
+    // Medium desktop view
+    @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
+      width: 140px;
+    }
+  }
+
+  #kprofile {
+    .kcol-left,
+    .kcol-right {
+      // Tablet/Mobile view
+      @media (max-width: @screen-md-max) {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+
+  // PATHWAY
+  // -------------------------------------------------
+  .kpathway {
+    border-color: @kborder-color;
+    margin-bottom: @t3-global-margin;
+
+    .kforum-pathway {
+      background-color: @gray-lightest;
+      border-top: 1px solid @kborder-color;
+      border-color: @kborder-color;
+      padding: (@t3-global-padding / 2) (@t3-global-padding / 1.5);
+      margin-top: -1px;
+
+      a {
+        color: @text-color;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+        }
+      }
+    }
+
+    &.breadcrumbs-2 {
+      margin-top: @t3-global-margin;
+    }
+  }
+
+  .klist-markallcatsread {
+    background-color: @gray-lightest;
+    border-color: @kborder-color;
+    padding: (@t3-global-padding / 4) (@t3-global-padding / 1.5);
+    margin-bottom: @t3-global-margin;
+  }
+
+  .klist-actions {
+    border-color: @kborder-color;
+    margin-bottom: @t3-global-margin;
+
+    td {
+      border-color: @kborder-color;
+      padding: 10px;
+    }
+
+    form#jumpto {
+      margin: 0;
+    }
+  }
+
+  .klist-bottom {
+    margin-bottom: 0;
+    padding: @t3-global-padding / 2;
+    .clearfix();
+  }
+
+
+  // KBLOCK
+  // -------------------------------------------------
+  div.kblock {
+    border-color: @kborder-color;
+    margin: 0 0 @t3-global-margin;
+
+    div.kbody {
+      border-color: @kborder-color;
+    }
+
+    div.kheader {
+      background-color: @t3-footer-background;
+      border-left: 5px solid @brand-primary;
+      border-bottom: 0;
+      padding: (@t3-global-padding / 1.5) (@t3-global-padding / 1.5);
+      position: relative;
+
+      h1, h2, h3 {
+        line-height: 1;
+        margin: 0;
+        min-height: 1px;
+        padding: 0;
+
+        span, a {
+          display: inline-block;
+          font-family: @font-family-sans-serif;
+          font-size: @font-size-base;
+          font-weight: 600;
+          letter-spacing: 0.25px;
+          text-transform: uppercase;
+        }
+
+        a:hover, a:focus, a:active {
+          color: @link-hover-color;
+          text-decoration: none;
+        }
+      }
+
+      .ktitle-desc {
+        color: darken(@gray-light, 10%);
+        font-weight: 300;
+        line-height: 1.5;
+        margin-top: 5px;
+      }
+    }
+
+    // Block container
+    // ----------------
+    .kcontainer {
+      table.kblocktable {
+        border-width: 0;
+
+        @media (min-width: @grid-float-breakpoint) {
+          border-width: 1px;
+        }
+      }
+
+      .kblocktable tr td {
+        border-color: @kborder-color;
+        padding: @t3-global-padding / 2;
+      }
+
+      .kblocktable tr.krow1 td {
+        background-color: @white;
+      }
+
+      .kblocktable tr:last-child td {
+        border-bottom: 0;
+      }
+
+      // Block table
+      .kblocktable .kcol-category-icon {
+        display: none;
+        text-align: center;
+        width: 8%;
+        @media (min-width: @grid-float-breakpoint) {
+          display: table-cell;
+        }
+      }
+
+      .kblocktable .kcol-kcattitle {
+        width: 42%;
+      }
+
+      .kblocktable .kcol-kcattopics {
+        display: none;
+        width: 8%;
+
+        @media (min-width: @grid-float-breakpoint) {
+          display: table-cell;
+        }
+      }
+
+      .kblocktable .kcol-kcatreplies {
+        display: none;
+        width: 8%;
+        @media (min-width: @grid-float-breakpoint) {
+          display: table-cell;
+        }
+      }
+
+      .kblocktable .kcol-kcatlastpost {
+        display: none;
+        width: 34%;
+        @media (min-width: @grid-float-breakpoint) {
+          display: table-cell;
+        }
+      }
+
+      .kcol-category-icon {
+        i {
+          color: @gray-light;
+        }
+      }
+
+      // Sub-category
+      // ------------
+      .kcc-subcat {
+        a {
+          color: @text-color;
+
+          &:hover, &:focus, &:active {
+            color: @link-hover-color;
+            text-decoration: underline;
+          }
+        }
+
+        span.kreadforum-sm,
+        span.knotloginforum-sm {
+          height: 14px;
+          width: 14px;
+        }
+      }
+
+      // Last post
+      .kcol-kcatlastpost a {
+        border-bottom: 1px solid @t3-border-color;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+          border-color: @link-hover-color;
+        }
+      }
+
+      .klatest-subject-by {
+        br {
+          display: none;
+        }
+
+        span {
+          border-left: 1px solid @kborder-color;
+          display: inline-block;
+          line-height: 1;
+          margin-left: 5px;
+          padding-left: 5px;
+        }
+      }
+
+      .klatest-subject {
+        margin-bottom: 3px;
+      }
+
+      .klatest-avatar,
+      .ktopic-latest-post-avatar {
+        background-color: @gray-lighter;
+        border: 0;
+        display: inline-block;
+        margin: 3px 10px 0 0;
+        padding: 3px;
+        width: auto;
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .kthead-title {
+        a {
+          background-color: @gray-lighter !important;
+          color: @gray !important;
+          display: inline-block;
+          font-size: @font-size-small;
+          letter-spacing: 0.5px;
+          margin-bottom: 8px;
+          padding: 3px 5px 1px;
+          text-transform: uppercase;
+
+          &:hover, &:focus, &:active {
+            background-color: @link-hover-color !important;
+            color: @white !important;
+          }
+        }
+      }
+
+      .kthead-desc {
+        color: lighten(@gray, 10%);
+        line-height: 1.4;
+      }
+    }
+
+
+    // Announcement
+    // ------------
+    &.kannouncement {
+      .kheader {
+        background-color: @brand-secondary;
+        border: 0;
+      }
+
+      #kannouncement {
+        .kbody {
+          border: 1px solid lighten(@brand-secondary, 15%);
+          border-top: 0;
+        }
+
+        .kanndesc {
+          background-color: lighten(@brand-secondary, 40%);
+          padding: @t3-global-padding;
+          .clearfix();
+
+          a {
+            background-color: @brand-secondary;
+            color: @white;
+            display: inline-block;
+            font-size: @font-size-small;
+            float: right;
+            letter-spacing: 0.5px;
+            padding: 5px 10px;
+            margin-top: @t3-global-margin / 2;
+            text-transform: uppercase;
+
+            &:hover, &:focus, &:active {
+              background-color: @link-hover-color;
+              color: @white;
+            }
+          }
+        }
+      }
+
+      div > label {
+        margin-bottom: @t3-global-margin;
+      }
+
+      .anncreated {
+        display: inline-block;
+        margin-bottom: @t3-global-margin / 2;
+      }
+
+      .input-append {
+        input {
+          display: inline-block;
+        }
+
+        #kanncreated_img {
+          background: @gray-light-lv3
+        }
+
+        .icon-calendar:before {
+          content: "\f073";
+          font-family: FontAwesome;
+        }
+      }
+    }
+
+    div.kactions {
+      background-color: transparent;
+      padding: (@t3-global-padding / 2) @t3-global-padding;
+    }
+  }
+
+  
+  // KUNENA MAIN NAVIGATION
+  // -------------------------------------------------
+  a.ktopic-title {
+    font-family: @font-family-sans-serif;
+    font-weight: normal;
+    font-size: @font-size-large;
+  }
+
+
+  // TOPIC LIST
+  // -------------------------------------------------
+  #kflattable .kcol-ktopicreplies,
+  #kflattable .kcol-ktopicicon,
+  #kflattable .kcol-ktopicviews {
+    display: none;
+    width: 8%;
+    @media (min-width: @grid-float-breakpoint) {
+      display: table-cell;
+    }
+  }
+
+  #kflattable .kcol-ktopictitle {
+    display: table-cell;
+    width: 80%;
+    @media (min-width: @grid-float-breakpoint) {
+      display: table-cell;
+      width: 40%;
+    }
+  }
+
+  #kflattable .kcol-ktopiclastpost {
+    display: none;
+    width: 35%;
+
+    @media (min-width: @grid-float-breakpoint) {
+      display: table-cell;
+    }
+  }
+
+  #kflattable td.ktopicmoderation {
+    display: table-cell !important;
+    margin-top: 0 !important;
+    width: auto !important;
+  }
+
+  .ktopic-title-cover a {
+    color: @text-color;
+
+    &:hover, &:focus, &:active {
+      color: @link-hover-color;
+    }
+  }
+
+  .ktopic-details-kcategory {
+    .ktopic-posted-time {
+      color: @gray-light;
+      margin-right: 10px;
+    }
+
+    .ktopic-by {
+      color: @gray-light;
+    }
+  }
+
+  .klist-actions-bottom {
+    border-color: @kborder-color;
+
+    td {
+      border-color: @kborder-color;
+      height: auto;
+      padding: 10px;      
+    }
+  }
+
+  .klist-bottom {
+    border-color: @kborder-color;
+  }
+
+  // TOPIC DETAIL
+  // -------------------------------------------------
+  div.kmsg-header {
+    background-color: @gray-lighter;
+    border-bottom: 0;
+    margin-top: 10px;
+
+    // Mobile view
+    @media (max-width: @screen-xs-max) {
+      .clearfix();
+      margin-top: 0;
+    }
+
+    h2 {
+      background-color: transparent;
+      color: @text-color;
+      font-size: @font-size-base;
+      padding-top: @t3-global-padding / 3;
+      padding-bottom: @t3-global-padding / 3;
+
+      // Mobile view
+      @media (max-width: @screen-xs-max) {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .kmsgtitle {
+        color: lighten(@gray, 10%) !important;
+        font-size: @font-size-base;
+      }
+
+      .kmsgdate {
+        color: lighten(@gray, 10%) !important;
+      }
+
+      span.kmsg-id-top a,
+      span.kmsg-id-bottom a,
+      span.kmsg-id-left a,
+      span.kmsg-id-right a {
+        color: lighten(@gray, 10%) !important;
+      }
+    }
+  }
+
+  td.kmessage-left {
+    padding: @t3-global-padding;
+
+    .kmsgbody {
+      margin: 0;
+    }
+
+    .kmsgtext {
+      font-weight: 300;
+    }
+
+  }
+
+  // SEARCH PAGE
+  // -------------------------------------------------
+  #kforumsearch {
+    td {
+      background-color: transparent;
+      padding: @t3-global-padding / 1.5;
+    }
+    
+    .fieldset {
+      background-color: transparent;
+
+      legend {
+        border: 0;
+        display: inline-block;
+        font-size: @font-size-base;
+        width: auto;
+      }
+
+      input[type="text"] {
+        display: inline-block;
+        margin-bottom: 10px;
+      }
+
+      #keywords {
+        width: 150px;
+      }
+    }
+
+    #categorylist {
+      display: block;
+      font-size: @font-size-base;
+      margin-bottom: 10px;
+      min-height: 152px;
+      padding: 10px;
+      clear: both;
+    }
+  }
+
+
+  // ADD NEW
+  // -------------------------------------------------
+  table#kpostmessage {
+    @media (max-width: @screen-xs) {
+      width: 100%!important;
+    }
+    
+    @media (max-width: @screen-xs-max) {
+      padding-right: 0;
+
+      td.kpostbuttons {
+        height: auto;
+
+        #kbbcode-toolbar {
+          height: auto;
+          overflow: hidden;
+        }
+      }
+
+      #postcatid {
+        width: 100%;
+      }
+
+      #subject {
+        width: 100%;
+      }
+    }
+  }
+
+  #kpost-attachments {
+    .kattachment .kbutton {
+      display: inline-block;
+      margin: @t3-global-margin / 2 0;
+    }
+  }
+
+
+  // USER PROFILE PAGE
+  // --------------------------------------------------
+  .k-profile h2 span.kheadbtn a {
+    background-color: @gray-dark;
+    border: 0;
+    color: @gray-light;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    padding: 8px 8px 5px;
+
+    &:hover, &:focus, &:active {
+      background-color: @brand-primary;
+    }
+  }
+
+  .k-profile a.ktopic-title {
+    font-size: @font-size-base;
+    font-weight: @font-weight-500;
+  }
+
+  table#kprofile {
+    td.kcol-first {
+      .clearfix();
+    }
+    
+    td.kcol-left {
+      @media (max-width: @screen-sm-min) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    td.kcol-right {
+      @media (max-width: @screen-sm-min) {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    dl.tabs dt {
+      border: 1px solid @kborder-color;
+      font-weight: normal;
+      margin-right: 5px;
+      margin-bottom: 5px;
+
+      &.open {
+        background-color: @brand-primary;
+        border-color: @brand-primary;
+        color: @white;
+      }
+    }
+  }
+
+  #kprofile-tabs #kflattable {
+    padding-right: 0;
+  }
+
+  #kprofile-tabs #kflattable tr {
+    border-bottom: 1px solid @kborder-color;
+    padding-right: 0;
+  }
+
+  #kprofile-tabs td.ktopictittle {
+    display: table-cell;
+  }
+
+  #kprofile-tabs #kflattable td:nth-child(2) {
+    @media (max-width: @screen-xs-max) {
+      display: none;
+    }
+  }
+
+  #kprofile-tabs td.ktopicmoderation {
+    display: table-cell;
+    width: auto;
+  }
+
+  #kprofile-tabs div.kblock .kcontainer table tr:last-child td {
+    border-bottom: 1px solid @kborder-color;
+  }
+
+  #searchuser_tbody {
+    .search-user {
+      .inputbox {
+        display: inline-block;
+      }
+    }
+  }
+
+  // ANNOUNCEMENT
+  // -----------------------------------------
+  #kannouncement {
+    .kbody {
+      label {
+        display: block;
+      }
+    }
+  }
+
+
+  // MISC
+  // -----------------------------------------
+  div#kwhoisonline table.kblocktable td.kcol-first,
+  div#kfrontstats-tbody table.kblocktable td.kcol-first {
+    width: 8% !important;
+  }
+}
+
+
+
+
+// LATEST POST MODULE
+// -------------------------------------------
+.klatest {
+  .klatest-items .klatest-item {
+    border-bottom: 1px solid @t3-border-color;
+    padding: (@t3-global-padding / 2) 0;
+    margin: 0;
+
+    &:last-child {
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    .klatest-subject a {
+      color: @text-color;
+      font-size: @font-size-base;
+
+      &:hover, &:focus, &:active {
+        color: @link-hover-color;
+      }
+    }
+
+    .knewchar {
+      vertical-align: middle;
+    }
+
+    .klatest-avatar {
+      margin-right: 10px;
+
+      img {
+        border: 0;
+        margin: 6px 0 0;
+        padding: 0;
+      }
+    }
+
+    .klatest-posttime, .klatest-cat, .klatest-author {
+      font-family: @font-family-serif;
+      font-size: @font-size-small;
+    }
+  }
+}
+
+.klatest-preview-content {
+  color: @gray;
+}
+
+
+// View Announcement
+.view-announcement {
+  #Kunena {
+    div.kblock div.kactions {
+      background-color: @gray-lightest;
+      border-color: @kborder-color;
+
+      a {
+        color: @link-color !important;
+
+        &:hover, &:focus, &:active {
+          color: @link-hover-color !important;
+        }
+      }
+    }
+
+    div.kblock.kannouncement div#kannouncement div.kanndesc {
+      background-color: transparent;
+      border-color: @kborder-color;
+
+      label {
+        margin-bottom: @t3-global-margin;
+      }
+    }
+
+    div.kblock.kannouncement #kannouncement .kbody {
+      border-color: @kborder-color;
+    }
+
+    #kanncreated {
+      display: inline-block;
+    }
+
+    #kanncreated_img {
+      display: inline-block;
+      height: 46px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    textarea {
+      font-size: @font-size-base;
+      font-weight: @font-weight-normal;
+      padding: 10px;
+    }
+
+    // Announcement table list
+    table.kannouncement {
+      th, td {
+        border: 1px solid @kborder-color;
+        padding: 10px 15px;
+      }
+
+      th {
+        background-color: @gray-lighter;
+        color: @text-color;
+        font-weight: @font-weight-normal;
+      }
+
+      td {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+// Fix for ie8
+.ie8 {
+	#Kunena {
+		.klist-markallcatsread .fltrt {
+			width: 50%;
+		}
+		
+		.klist-actions .klist-jump-all {
+			width: 20% !important;
+			
+			.inputbox {
+				vertical-align: top;
+			}
+		}
+		
+		#advsearch_options .kcol legend {
+			display: block;
+			margin-bottom: @t3-global-margin;
+		}
+	}
+}

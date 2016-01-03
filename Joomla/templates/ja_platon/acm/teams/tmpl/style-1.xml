@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<title>Teams Style 3</title>
+	<sampledata><![CDATA[	
+		{":type":"ja_platon:teams","teams":{"jatools-layout-teams":"style-1","team_about[data]":{"team_about[data][member-image]":["images/joomlart/teams/mem-3.jpg","images/joomlart/teams/mem-4.jpg","images/joomlart/teams/mem-2.jpg","images/joomlart/teams/mem-6.jpg"],"team_about[data][member-name]":["Dewey Hall","Lorenzo Pope","Perry Larson","Darren Klein"],"team_about[data][member-position]":["Professor of physics","Interaction Designer","CEO","Experience Designer"],"team_about[data][member-desc]":["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum tristique metus, sit amet rhoncus justo sagittis quis. Maecenas ullamcorper et purus et lacinia.","In gravida, urna non blandit eleifend, turpis augue viverra ligula, a viverra ligula nibh commodo velit. Vivamus pharetra ornare tristique. Pellentesque id quam vitae lectus pellentesque ullamcorper.","Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed et leo placerat, euismod turpis et, lacinia purus. Aliquam ut efficitur enim, sed fermentum tellus. ","Ut ac vehicula turpis, id feugiat eros. Nulla venenatis augue nec lectus tincidunt, non efficitur orci dapibus. Vivamus nec arcu mauris. Suspendisse ut ullamcorper massa. Duis et blandit tellus. "],"rows":4,"cols":5,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="team_about">
+		<fieldset name="member_info" label="TEAM_MEMBER_INFO_LABEL" description="TEAM_MEMBER_INFO_DESC">
+		<field name="data" type="jalist" >
+			<item name="member-image" type="media" default="" label="TEAM_MEMBER_LABEL" description="TEAM_MEMBER_DESC" />
+			<item name="member-name" type="text" size="40" default="" label="TEAM_MEMBER_NAME_LABEL" description="TEAM_MEMBER_NAME_DESC" required="1" />
+			<item name="member-position" type="text" size="40" default="" label="TEAM_MEMBER_POSITION_LABEL" description="TEAM_MEMBER_POSITION_DESC" />
+			<item name="member-desc" type="text" size="40" default="" label="TEAM_MEMBER_DESC_LABEL" description="TEAM_MEMBER_DESC_DESC" />
+		</field>
+		</fieldset>
+	</fields>
+</form>

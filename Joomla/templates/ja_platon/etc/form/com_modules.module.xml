@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params">
+		<fieldset name="custom-field" label="JA Extra Fields" description="">
+			<field name="module-intro" type="textarea" default="" label="TPL_MENU_ITEM_MODULE_INTRO_LABEL" description="TPL_MENU_ITEM_MODULE_INTRO_DESC" filter="RAW" />
+      <field name="full-width" type="radio" default="1" label="FULL_WIDTH_LABEL" description="FULL_WIDTH_DESC" >
+            <option value="0" class="off">JNO</option>
+            <option value="1" class="on">JYES</option>
+          </field>
+    </fieldset>
+  </fields>
+</form>

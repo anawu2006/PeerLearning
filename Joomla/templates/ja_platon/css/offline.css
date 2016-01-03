@@ -1,0 +1,237 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+ 
+/**
+ * @copyright	Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 14px;
+	line-height: 1.625;
+	font-family: "Open Sans",sans-serif;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* BODY 
+---------------------*/
+#frame {
+	margin-top: 8%;
+	text-align: left;
+}
+
+/* Container Offline */
+.offline-container {
+	width: 320px;
+	padding: 60px 30px;
+	margin: 0 auto;
+	border: 2px solid #fab325;
+}
+
+/* Title Offline */
+#offline-title {
+	margin: 0 0 30px 0;
+}
+
+#offline-title h1 {
+	color: #333;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Roboto",sans-serif;
+	margin: 0;
+	position: relative;
+}
+
+#offline-title h1:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 60px;
+	border-bottom: 3px solid #fab325;
+	left: 50%;
+	bottom: -8px;
+	margin-left: -30px;
+}
+
+/* Description offline */
+.des-offline {
+	color: #666;
+	margin-bottom: 30px;
+	text-align: center;
+	position: relative;
+	padding-top: 10px;
+	font-size: 13px;
+}
+
+.des-offline br {
+	display: none;
+}
+
+#offline-img {
+	margin: 0 0 30px 0;
+	text-align: center;
+}
+
+#offline-img img {
+	max-width: 100%;
+}
+
+/* Form Offline */
+.form-offline {
+
+}
+
+.form-group {
+	margin-bottom: 20px;
+}
+
+.control-label {
+	display: block;
+	margin-bottom: 5px;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.control-input {
+	border: 1px solid #ccc;
+	width: 100%;
+	height: 40px;
+	padding: 0 10px;
+	background: none;
+	color: #333;
+	opacity: 0.6;
+}
+
+.control-input:hover,
+.control-input:focus {
+	opacity: 1;
+}
+
+/* Remember */
+#form-login-remember {
+	margin-bottom: 20px;
+	float: left;
+}
+
+#form-login-remember label {
+	font-size: 13px;
+	color: #666;
+}
+
+#form-login-remember .inputbox {
+	margin: 5px 3px 0 0;
+	vertical-align: top;
+}
+
+/* Button */
+.button {
+	background: #fab325;
+	border: 1px solid #fab325;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	float: right;
+	transition: 0.2s;
+	font-family: "Roboto",sans-serif;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+	cursor: pointer;
+	background: #e79c05 !important;
+	border-color: #e79c05 !important;
+}
+
+/* Message Error */
+#system-message .error,
+#system-message .alert {
+	background: #f2dede;
+	color: #b94a48;
+	margin: auto;
+	padding: 20px;
+	width: 700px;
+	margin-bottom: 20px;
+}
+
+.error.message ul {
+	padding: 0;
+	list-style: none;
+}
+
+.alert {
+	position: relative;
+}
+
+.alert h4 {
+	font-size: 18px;
+	margin: 0;
+}
+
+.alert p {
+	margin: 5px 0 0 0;
+}
+
+.close {
+	right: 15px;
+	top: 15px;
+	position: absolute;
+	cursor: pointer;
+	height: 16px;
+	text-align: center;
+	width: 16px;
+	line-height: 16px;
+	font-size: 20px;
+}
+
+
+@media (max-width:  360px){
+	#frame {
+		padding: 0 20px;
+		margin-top: 25%;
+	}
+
+	/* Title Offline */
+
+	.offline-container {
+		width: 100%;
+		padding: 40px 20px;
+	}
+
+	.form-group {
+		width: 100%;
+	}
+
+	/* Message Error */
+	#system-message .error,
+	#system-message .alert {
+		width: 100%;
+	}
+}

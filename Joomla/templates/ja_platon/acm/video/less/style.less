@@ -1,0 +1,94 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// VARIABLES & MIXINS
+// ------------------
+@import "../../../less/vars.less"; // Modify this for custom colors, font-sizes, etc
+
+
+// ----------------------------------------
+// VIDEO STYLE
+// ----------------------------------------
+.acm-video {
+  &.style-1 {
+    overflow: hidden;
+
+    .video-wrapper {
+      height: 0;
+      padding-bottom: 50%;
+      padding-top: 0;
+      position: relative;
+      background-color: @black;
+
+      img {
+        max-width: 100%;
+      }
+
+      &.playing {
+        .btn-play {
+          display: none;
+        }
+      }
+    }
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+    }
+
+    video {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .video-player {
+      padding: 0;
+      margin-top: 0;
+      margin-left: 0;
+      width: 100%;
+
+      .btn-play {
+        height: 80px;
+        width: 80px;
+        margin-top: -40px;
+        margin-left: -40px;
+        padding: 0 !important;
+        border: 2px solid @white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        color: @white;
+
+        &:hover {
+          color: @gray-dark;
+          box-shadow: none;
+
+          &:after {
+            border-left: 20px solid @gray-dark;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: inline-block;
+          border-left: 20px solid @white;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+          margin-top: 23px;
+          .transition(border-left 500ms);
+        }
+
+        &:before {
+          background: @white;
+        }
+      }
+    }
+  }
+}

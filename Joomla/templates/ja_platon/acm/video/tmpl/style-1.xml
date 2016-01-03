@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Video Style 1</title>
+	<sampledata><![CDATA[  
+    {":type":"ja_platon:video","video":{"jatools-layout-video":"style-1","video-style[video-link]":["local=joomlart/media/video"]}}
+    ]]></sampledata>
+  <fields name="video-style">
+    <fieldset name="basic" label="VIDEO_BASIC_LABEL" description="VIDEO_BASIC_DESC" multiple="0"> 
+      <field name="video-link" type="type" size="50" default="vimeo=" label="VIDEO_VIDEOBACKGROUND_LABEL" description="VIDEO_VIDEOBACKGROUND_DESC"></field>
+    </fieldset>
+  </fields>
+</form>

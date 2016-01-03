@@ -1,0 +1,67 @@
+// -------------------------------
+// TEAMS STYLE 1
+// -------------------------------
+.acm-teams {
+  .style-1 {
+    margin-bottom: 0;
+
+    &.owl-carousel {
+      padding: 0;
+
+      div.owl-prev,
+      div.owl-next {
+        background-color: @gray-darker;
+        border-radius: 0;
+        display: inline-block;
+        float: left;
+        padding: 5px 10px;
+
+        i {
+          font-size: 18px;
+        }
+      }
+
+      div.owl-next {
+        float: right;
+      }
+    }
+
+    .item {
+      .item-inner {
+        position: relative;
+        overflow: hidden;
+        color: @white;
+
+        .member-image {
+          margin-bottom: @t3-global-margin;
+
+          img {
+            width: 100%;
+            border: 1px solid transparent;
+          }
+        }
+
+        h4 {
+          margin: 0 0 @t3-global-margin;
+        }
+
+        .member-title {
+          display: block;
+          margin-bottom: @t3-global-margin/2;
+        }
+
+        .member-position {
+          color: darken(@gray-light, 5%);
+          display: block;
+          font-size: @font-size-small;
+          font-weight: @font-weight-normal;
+          text-transform: uppercase;
+        }
+      }
+
+      .member-info {
+        color: @gray-light;
+      }
+    }
+  }
+}

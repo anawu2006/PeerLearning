@@ -1,0 +1,266 @@
+/**
+ * $JA#COPYRIGHT$
+ */
+ 
+// RTL STYLES
+// ------------------------------------------------------
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 @grid-gutter-width @t3-global-margin 0;
+  }
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  @media (max-width: @screen-sm) {
+    margin: 0 0 @t3-global-margin @grid-gutter-width;
+  }
+}
+
+.languageswitcherload {
+  ul {
+    float: left;
+  }
+}
+
+.head-right-item.head-links .nav > li > a::after {
+  content: "\f177";
+}
+
+// owl-carousel
+.owl-carousel {
+	direction: ltr;
+
+	.owl-wrapper {
+		direction: rtl;
+	}
+}
+
+// Icon Arow
+html[dir="rtl"] .joms-grid-home .joms-calendar > div.joms-calendar__grid {
+	.joms-calendar--prev::before {
+		content: "\f178";
+	}
+
+	.joms-calendar--next::before {
+		content: "\f177";
+	}
+}
+
+.fa {
+	&.fa-long-arrow-right:before {
+		content: "\f177";
+	}
+
+	&.fa-long-arrow-left:before {
+		content: "\f178";
+	}
+}
+
+html[dir="rtl"] .acm-slick.slick-slider {
+	.slick-arrow::before {
+		content:  "\f105";
+	}
+	.slick-next::before {
+		content:  "\f104";
+	}
+}
+
+// Language
+.languageswitcherload ul {
+	float: right;
+}
+
+// Ja login Modules
+#ja-login-form #ja-user-login ul {
+	text-align: right !important;
+}
+
+// COMMUNITY
+// ------------------------
+.joms-checkbox span {
+  margin-right: 22.6525px;
+  margin-left: 0;
+}
+
+.joms-hcard__info-content {
+  padding-left: 0;
+  padding-right: 10px;
+}
+    
+.com_community {
+  &[dir="rtl"] {
+    .joms-online a::after {
+      left: 5px;
+      right: auto;
+    }
+
+    .joms-focus__link > li {
+      float: right;
+
+      &.liked {
+        float: left;
+      }
+    }
+
+    .joms-right {
+      float: left;
+    }
+
+    .joms-postbox-charcount {
+      left: 0;
+      right: auto;
+    }
+
+    .joms-landing__content {
+      left: 50%;
+      right: auto;
+    }
+
+    .joms-icon--add {
+      // Tablet view
+      @media (max-width: 1024px) {
+        left: 100px;
+        right: auto;
+      }
+    }
+
+    .joms-popup__comment {
+      .joms-icon--add {
+        // Tablet view
+        @media (max-width: 1024px) {
+          left: 90px;
+          right: auto;
+        }
+      } 
+    }
+
+    .joms-subnav--desktop > ul > li {
+      border-left: 1px solid rgba(0,0,0,0.06);
+      border-right: 0;
+    }
+
+    .joms-postbox-tab,
+    .joms-list__search .joms-list__utilities,
+    .joms-list--message .joms-list--message__remove,
+    .joms-list--message .joms-postbox-tab,
+    .joms-list--message .joms-list--message__checkbox {
+    	text-align: left;
+    }
+
+    .joms-list--friend .joms-list__avatar,
+    .joms-list--general .joms-list__avatar,
+    .joms-list--friend .joms-list__body,
+    .joms-list--general .joms-list__body,
+    .joms-comment__actions,
+    .mfp-content {
+    	text-align: right;
+    }
+
+    .joms-list--message .joms-list--message__time {
+    	right: auto;
+    	left: 0.5%;
+    }
+
+    .joms-comment__actions {
+      padding-right: 0;
+    }
+
+    .joms-list--friend .joms-list__body,
+    .joms-list--general .joms-list__body {
+    	padding-left: 0;
+    	padding-right: @t3-global-padding;
+    }
+
+    .joms-sortings .joms-select--wrapper:nth-child(2n+1) {
+    	margin-left: 0;
+    }
+
+    .joms-select--wrapper::after {
+    	left: 8.65248px;
+    	right: auto;
+    }
+
+    &.view-profile {
+      .joms-form__group {
+        .clearfix {
+          > div {
+            float: right!important;
+
+            &:first-child {
+              margin-right: 0!important;
+              margin-left: 4px;
+            }
+          }
+        }
+
+        .joms-avatar--stream {
+          padding-left: 0!important;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .cRegister .joms-form__group .clearfix > div {
+      float: right!important;
+
+      &:first-child {
+        margin-left: 5px;
+        margin-right: 0;
+      }
+    }
+
+    .joms-hcard__cover > img {
+      top: 0!important;
+    }
+
+    .joms-focus__date.cover, .joms-focus__date.module {
+      left: auto;
+      right: 14px;
+    }
+
+    .joms-ribbon__wrapper {
+      left: auto;
+      right: 0;
+
+      .joms-ribbon {
+        left: 15px;
+        transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+// KUNENA
+// --------------------------------
+html[dir="rtl"] #Kunena {
+  .kbuttonuser span span,
+  .kbuttonuser span span:hover {
+    background-position: inherit;
+  }
+
+  .kicon-button span span {
+    padding: 0 7px 0 20px;
+  }
+
+  .kprofilebox-left {
+    border-left: 1px solid #bfc3c6;
+    border-right: 0;
+  }
+
+  .kpathway .kforum-pathway {
+    .clearfix();
+
+    .path-element-first {
+      float: right;
+      padding-right: @t3-global-padding;
+    }
+  }
+}

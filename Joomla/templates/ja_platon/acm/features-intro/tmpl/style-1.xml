@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <title>Features Intro Style 1</title>
+	<sampledata><![CDATA[
+    {":type":"ja_platon:features-intro","features-intro":{"jatools-layout-features-intro":"style-1","features-intro[columns]":["3"],"features-intro[features-button-value]":["Explore Graduate Degree Programs"],"features-intro[features-link]":["#"],"features-intro[data]":{"features-intro[data][title]":["Post-Baccalaureate","MFA","Low-Residency MFA"],"features-intro[data][link]":["#","#","#"],"features-intro[data][description]":["((span class=\"icon\"))((i class=\"fa fa-mortar-board\"))((/i))((/span))Lorem ipsum dolor sit amet, ectetur adipiscing elit. Pellentesque felis erat, \nconvallis in vestibulum a, dolo sit.","((span class=\"icon\"))((i class=\"fa fa-diamond\"))((/i))((/span))Ued ut perspiciatis unde omnis iste natus error sit \nvoluptatem felis erat, \nconvallis in vestibulum acc \nusantium lorem odio.","((span class=\"icon\"))((i class=\"fa fa-trophy\"))((/i))((/span))Quisque viverra tellus eget erat hendrerit, non lacinia turpis iaculis. Duis rhoncus augue eu lacinia ultrices risus tristique."],"rows":3,"cols":4,"type":"list"}}}
+    ]]></sampledata>
+	<fields name="features-intro">
+		<fieldset name="basic" label="FEATURES_BASIC_LABEL" description="FEATURES_BASIC_DESC">
+
+			<field name="columns" type="list" label="FEATURES_COLUMNS_LABEL" description="FEATURES_COLUMNS_DESC" >
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+			</field>
+
+			<field name="features-button-value" type="text" default="" label="FEATURES_BUTTON_VALUE_LABEL" description="FEATURES_BUTTON_VALUE_LABEL_DESC"  />
+			<field name="features-link" type="text" default="" label="FEATURES_LINK_LABEL" description="FEATURES_LINK_LABEL_DESC"  />
+
+		</fieldset>
+	
+		<fieldset name="section-features" label="FEATURES_SECTION_LABEL" description="FEATURES_SECTION_DESC">
+			<field name="data" type="jalist" >
+				<item name="title" type="text" default="" size="40" label="FEATURES_TITLE_LABEL" description="FEATURES_TITLE_DESC" />
+				<item name="link" type="text" default="" label="FEATURES_LINK_LABEL" description="FEATURES_LINK_LABEL_DESC"  />
+				<item name="description" type="textarea" default="" label="FEATURES_DESCRIPTION_LABEL" description="FEATURES_DESCRIPTION_DESC" rows="5" cols="40" />
+			</field>
+
+		</fieldset>
+		
+  </fields>
+</form>

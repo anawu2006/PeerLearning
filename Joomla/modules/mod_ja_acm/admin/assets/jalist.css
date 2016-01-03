@@ -1,0 +1,23 @@
+table.jalist {
+}
+
+table.jalist th {
+}
+
+table.jalist td {
+}
+
+table.jalist td:last-child {
+    min-width: 50px;
+}
+
+table.jalist .btn {
+}
+
+table.jalist tr.first .btn-delete {
+    display: none !important;
+}
+
+table.jalist tr:hover .btn {
+    display: inline-block;
+}

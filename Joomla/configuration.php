@@ -16,7 +16,7 @@ class JConfig {
 	public $user = 'root';
 	public $password = '123456';
 	public $db = 'peer';
-	public $dbprefix = 'ob2zc_';
+	public $dbprefix = 'qy8gs_';
 	public $live_site = '';
 	public $secret = 'aEMT4cfKeU0uO5Qg';
 	public $gzip = '0';

@@ -1,0 +1,927 @@
+#Kunena select {
+  border-radius: 0;
+  display: inline-block;
+  height: 42px;
+  padding: 5px;
+}
+#Kunena select:hover,
+#Kunena select:focus {
+  padding: 5px;
+}
+#Kunena .kbutton,
+#Kunena .kbutton:hover,
+#Kunena .kbutton:focus {
+  background-color: #575757;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2196f3;
+  border-color: #0d8aee;
+  padding: 8px 20px;
+  font-size: 13px;
+  line-height: 24px;
+  border-radius: 0;
+}
+#Kunena .kbutton:hover,
+#Kunena .kbutton:hover:hover,
+#Kunena .kbutton:focus:hover,
+#Kunena .kbutton:focus,
+#Kunena .kbutton:hover:focus,
+#Kunena .kbutton:focus:focus,
+#Kunena .kbutton.focus,
+#Kunena .kbutton:hover.focus,
+#Kunena .kbutton:focus.focus,
+#Kunena .kbutton:active,
+#Kunena .kbutton:hover:active,
+#Kunena .kbutton:focus:active,
+#Kunena .kbutton.active,
+#Kunena .kbutton:hover.active,
+#Kunena .kbutton:focus.active,
+.open > .dropdown-toggle#Kunena .kbutton,
+.open > .dropdown-toggle#Kunena .kbutton:hover,
+.open > .dropdown-toggle#Kunena .kbutton:focus {
+  color: #ffffff;
+  background-color: #0c7cd5;
+  border-color: #0a68b4;
+}
+#Kunena .kbutton:active,
+#Kunena .kbutton:hover:active,
+#Kunena .kbutton:focus:active,
+#Kunena .kbutton.active,
+#Kunena .kbutton:hover.active,
+#Kunena .kbutton:focus.active,
+.open > .dropdown-toggle#Kunena .kbutton,
+.open > .dropdown-toggle#Kunena .kbutton:hover,
+.open > .dropdown-toggle#Kunena .kbutton:focus {
+  background-image: none;
+}
+#Kunena .kbutton.disabled,
+#Kunena .kbutton:hover.disabled,
+#Kunena .kbutton:focus.disabled,
+#Kunena .kbutton[disabled],
+#Kunena .kbutton:hover[disabled],
+#Kunena .kbutton:focus[disabled],
+fieldset[disabled] #Kunena .kbutton,
+fieldset[disabled] #Kunena .kbutton:hover,
+fieldset[disabled] #Kunena .kbutton:focus,
+#Kunena .kbutton.disabled:hover,
+#Kunena .kbutton:hover.disabled:hover,
+#Kunena .kbutton:focus.disabled:hover,
+#Kunena .kbutton[disabled]:hover,
+#Kunena .kbutton:hover[disabled]:hover,
+#Kunena .kbutton:focus[disabled]:hover,
+fieldset[disabled] #Kunena .kbutton:hover,
+fieldset[disabled] #Kunena .kbutton:hover:hover,
+fieldset[disabled] #Kunena .kbutton:focus:hover,
+#Kunena .kbutton.disabled:focus,
+#Kunena .kbutton:hover.disabled:focus,
+#Kunena .kbutton:focus.disabled:focus,
+#Kunena .kbutton[disabled]:focus,
+#Kunena .kbutton:hover[disabled]:focus,
+#Kunena .kbutton:focus[disabled]:focus,
+fieldset[disabled] #Kunena .kbutton:focus,
+fieldset[disabled] #Kunena .kbutton:hover:focus,
+fieldset[disabled] #Kunena .kbutton:focus:focus,
+#Kunena .kbutton.disabled.focus,
+#Kunena .kbutton:hover.disabled.focus,
+#Kunena .kbutton:focus.disabled.focus,
+#Kunena .kbutton[disabled].focus,
+#Kunena .kbutton:hover[disabled].focus,
+#Kunena .kbutton:focus[disabled].focus,
+fieldset[disabled] #Kunena .kbutton.focus,
+fieldset[disabled] #Kunena .kbutton:hover.focus,
+fieldset[disabled] #Kunena .kbutton:focus.focus,
+#Kunena .kbutton.disabled:active,
+#Kunena .kbutton:hover.disabled:active,
+#Kunena .kbutton:focus.disabled:active,
+#Kunena .kbutton[disabled]:active,
+#Kunena .kbutton:hover[disabled]:active,
+#Kunena .kbutton:focus[disabled]:active,
+fieldset[disabled] #Kunena .kbutton:active,
+fieldset[disabled] #Kunena .kbutton:hover:active,
+fieldset[disabled] #Kunena .kbutton:focus:active,
+#Kunena .kbutton.disabled.active,
+#Kunena .kbutton:hover.disabled.active,
+#Kunena .kbutton:focus.disabled.active,
+#Kunena .kbutton[disabled].active,
+#Kunena .kbutton:hover[disabled].active,
+#Kunena .kbutton:focus[disabled].active,
+fieldset[disabled] #Kunena .kbutton.active,
+fieldset[disabled] #Kunena .kbutton:hover.active,
+fieldset[disabled] #Kunena .kbutton:focus.active {
+  background-color: #2196f3;
+  border-color: #0d8aee;
+}
+#Kunena .kbutton .badge,
+#Kunena .kbutton:hover .badge,
+#Kunena .kbutton:focus .badge {
+  color: #2196f3;
+  background-color: #ffffff;
+}
+#Kunena td,
+#Kunena p,
+#Kunena div {
+  font-family: 'Roboto', sans-serif;
+}
+#Kunena div.kmoderatorslist-jump form#jumpto {
+  margin: 0;
+}
+#Kunena ul.kpagination {
+  display: block;
+  float: left;
+}
+#Kunena ul.kpagination span,
+#Kunena ul.kpagination a:link,
+#Kunena ul.kpagination a:visited {
+  border: 1px solid #e5e5e5;
+  color: #575757 !important;
+  font-weight: 600;
+  margin: 0 3px;
+  padding: 5px 10px;
+}
+#Kunena ul.kpagination a:hover,
+#Kunena ul.kpagination a:focus {
+  background-color: #eeeeee !important;
+  color: #0a6ebd !important;
+}
+#Kunena ul.kpagination span {
+  background-color: #575757;
+  border-color: #575757;
+  color: #ffffff !important;
+}
+#Kunena .knewchar {
+  background-color: #e44949;
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 8px !important;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  margin-top: 0;
+  padding: 2px 4px;
+}
+#Kunena div.kblock div.kactions a {
+  color: #575757 !important;
+}
+@media (max-width: 767px) {
+  #Kunena .klist-pages-all {
+    height: 55px;
+  }
+}
+@media (max-width: 767px) {
+  #Kunena .klist-times-all {
+    height: auto;
+  }
+}
+#Kunena div.kfavorite {
+  margin: -18px 4px 0;
+}
+#Kunena div#ktop {
+  border-color: #2196f3;
+}
+#Kunena div#ktop #ktab {
+  margin-left: 0;
+}
+#Kunena div#ktop #ktab ul li a {
+  background-color: #2d2d2d !important;
+  border-radius: 0;
+  color: #9e9e9e;
+  padding: 16px;
+}
+#Kunena div#ktop #ktab ul li a span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+}
+#Kunena div#ktop #ktab ul li a:hover,
+#Kunena div#ktop #ktab ul li a:focus,
+#Kunena div#ktop #ktab ul li a:active {
+  background-color: #222222 !important;
+  color: #ffffff;
+}
+#Kunena div#ktop #ktab ul li a:hover span,
+#Kunena div#ktop #ktab ul li a:focus span,
+#Kunena div#ktop #ktab ul li a:active span {
+  background-color: transparent !important;
+}
+#Kunena div#ktop #ktab ul li.active a {
+  background-color: #2196f3 !important;
+  color: #ffffff;
+}
+#Kunena div#ktop #ktab ul li.active a span {
+  color: #ffffff !important;
+}
+#Kunena .kprofilebox .kprofileboxcnt {
+  background-color: #eeeeee;
+  padding: 16px;
+}
+#Kunena .kprofilebox .kprofileboxcnt .k_guest {
+  display: block;
+  margin-bottom: 12px;
+}
+#Kunena .kprofilebox .kprofileboxcnt .input span {
+  display: inline-block;
+  margin-left: 12px;
+}
+@media (max-width: 1499px) {
+  #Kunena .kprofilebox .kprofileboxcnt .input span {
+    display: block;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
+}
+#Kunena .kprofilebox .kprofileboxcnt .input span input[type="text"],
+#Kunena .kprofilebox .kprofileboxcnt .input span input[type="password"] {
+  border-radius: 0;
+  box-shadow: none;
+  display: inline-block;
+  padding: 6px;
+}
+#Kunena .kprofilebox .kprofileboxcnt .klink-block {
+  padding-top: 12px;
+}
+@media (max-width: 767px) {
+  #Kunena .kprofilebox .kprofileboxcnt .klink-block span {
+    display: block;
+  }
+}
+#Kunena .kprofilebox .kprofileboxcnt .klink-block a {
+  color: #9e9e9e;
+  margin-left: 10px;
+}
+#Kunena .kprofilebox .kprofileboxcnt .klink-block a:hover,
+#Kunena .kprofilebox .kprofileboxcnt .klink-block a:focus,
+#Kunena .kprofilebox .kprofileboxcnt .klink-block a:active {
+  color: #0a6ebd;
+}
+#Kunena .kprofilebox .kprofileboxcnt ul.kprofilebox-welcome input.kbutton {
+  position: static;
+}
+@media (min-width: 1200px) and (max-width: 1499px) {
+  #Kunena div#kprofile-leftcol {
+    width: 140px;
+  }
+}
+@media (max-width: 1199px) {
+  #Kunena #kprofile .kcol-left,
+  #Kunena #kprofile .kcol-right {
+    display: block;
+    width: 100%;
+  }
+}
+#Kunena .kpathway {
+  border-color: #e5e5e5;
+  margin-bottom: 24px;
+}
+#Kunena .kpathway .kforum-pathway {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+  border-color: #e5e5e5;
+  padding: 12px 16px;
+  margin-top: -1px;
+}
+#Kunena .kpathway .kforum-pathway a {
+  color: #575757;
+}
+#Kunena .kpathway .kforum-pathway a:hover,
+#Kunena .kpathway .kforum-pathway a:focus,
+#Kunena .kpathway .kforum-pathway a:active {
+  color: #0a6ebd;
+}
+#Kunena .kpathway.breadcrumbs-2 {
+  margin-top: 24px;
+}
+#Kunena .klist-markallcatsread {
+  background-color: #f7f7f7;
+  border-color: #e5e5e5;
+  padding: 6px 16px;
+  margin-bottom: 24px;
+}
+#Kunena .klist-actions {
+  border-color: #e5e5e5;
+  margin-bottom: 24px;
+}
+#Kunena .klist-actions td {
+  border-color: #e5e5e5;
+  padding: 10px;
+}
+#Kunena .klist-actions form#jumpto {
+  margin: 0;
+}
+#Kunena .klist-bottom {
+  margin-bottom: 0;
+  padding: 12px;
+}
+#Kunena .klist-bottom:before,
+#Kunena .klist-bottom:after {
+  content: " ";
+  display: table;
+}
+#Kunena .klist-bottom:after {
+  clear: both;
+}
+#Kunena div.kblock {
+  border-color: #e5e5e5;
+  margin: 0 0 24px;
+}
+#Kunena div.kblock div.kbody {
+  border-color: #e5e5e5;
+}
+#Kunena div.kblock div.kheader {
+  background-color: #414141;
+  border-right: 5px solid #2196f3;
+  border-bottom: 0;
+  padding: 16px 16px;
+  position: relative;
+}
+#Kunena div.kblock div.kheader h1,
+#Kunena div.kblock div.kheader h2,
+#Kunena div.kblock div.kheader h3 {
+  line-height: 1;
+  margin: 0;
+  min-height: 1px;
+  padding: 0;
+}
+#Kunena div.kblock div.kheader h1 span,
+#Kunena div.kblock div.kheader h2 span,
+#Kunena div.kblock div.kheader h3 span,
+#Kunena div.kblock div.kheader h1 a,
+#Kunena div.kblock div.kheader h2 a,
+#Kunena div.kblock div.kheader h3 a {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+}
+#Kunena div.kblock div.kheader h1 a:hover,
+#Kunena div.kblock div.kheader h2 a:hover,
+#Kunena div.kblock div.kheader h3 a:hover,
+#Kunena div.kblock div.kheader h1 a:focus,
+#Kunena div.kblock div.kheader h2 a:focus,
+#Kunena div.kblock div.kheader h3 a:focus,
+#Kunena div.kblock div.kheader h1 a:active,
+#Kunena div.kblock div.kheader h2 a:active,
+#Kunena div.kblock div.kheader h3 a:active {
+  color: #0a6ebd;
+  text-decoration: none;
+}
+#Kunena div.kblock div.kheader .ktitle-desc {
+  color: #858585;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+#Kunena div.kblock .kcontainer table.kblocktable {
+  border-width: 0;
+}
+@media (min-width: 1200px) {
+  #Kunena div.kblock .kcontainer table.kblocktable {
+    border-width: 1px;
+  }
+}
+#Kunena div.kblock .kcontainer .kblocktable tr td {
+  border-color: #e5e5e5;
+  padding: 12px;
+}
+#Kunena div.kblock .kcontainer .kblocktable tr.krow1 td {
+  background-color: #ffffff;
+}
+#Kunena div.kblock .kcontainer .kblocktable tr:last-child td {
+  border-bottom: 0;
+}
+#Kunena div.kblock .kcontainer .kblocktable .kcol-category-icon {
+  display: none;
+  text-align: center;
+  width: 8%;
+}
+@media (min-width: 1200px) {
+  #Kunena div.kblock .kcontainer .kblocktable .kcol-category-icon {
+    display: table-cell;
+  }
+}
+#Kunena div.kblock .kcontainer .kblocktable .kcol-kcattitle {
+  width: 42%;
+}
+#Kunena div.kblock .kcontainer .kblocktable .kcol-kcattopics {
+  display: none;
+  width: 8%;
+}
+@media (min-width: 1200px) {
+  #Kunena div.kblock .kcontainer .kblocktable .kcol-kcattopics {
+    display: table-cell;
+  }
+}
+#Kunena div.kblock .kcontainer .kblocktable .kcol-kcatreplies {
+  display: none;
+  width: 8%;
+}
+@media (min-width: 1200px) {
+  #Kunena div.kblock .kcontainer .kblocktable .kcol-kcatreplies {
+    display: table-cell;
+  }
+}
+#Kunena div.kblock .kcontainer .kblocktable .kcol-kcatlastpost {
+  display: none;
+  width: 34%;
+}
+@media (min-width: 1200px) {
+  #Kunena div.kblock .kcontainer .kblocktable .kcol-kcatlastpost {
+    display: table-cell;
+  }
+}
+#Kunena div.kblock .kcontainer .kcol-category-icon i {
+  color: #9e9e9e;
+}
+#Kunena div.kblock .kcontainer .kcc-subcat a {
+  color: #575757;
+}
+#Kunena div.kblock .kcontainer .kcc-subcat a:hover,
+#Kunena div.kblock .kcontainer .kcc-subcat a:focus,
+#Kunena div.kblock .kcontainer .kcc-subcat a:active {
+  color: #0a6ebd;
+  text-decoration: underline;
+}
+#Kunena div.kblock .kcontainer .kcc-subcat span.kreadforum-sm,
+#Kunena div.kblock .kcontainer .kcc-subcat span.knotloginforum-sm {
+  height: 14px;
+  width: 14px;
+}
+#Kunena div.kblock .kcontainer .kcol-kcatlastpost a {
+  border-bottom: 1px solid #eaeaea;
+}
+#Kunena div.kblock .kcontainer .kcol-kcatlastpost a:hover,
+#Kunena div.kblock .kcontainer .kcol-kcatlastpost a:focus,
+#Kunena div.kblock .kcontainer .kcol-kcatlastpost a:active {
+  color: #0a6ebd;
+  border-color: #0a6ebd;
+}
+#Kunena div.kblock .kcontainer .klatest-subject-by br {
+  display: none;
+}
+#Kunena div.kblock .kcontainer .klatest-subject-by span {
+  border-right: 1px solid #e5e5e5;
+  display: inline-block;
+  line-height: 1;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+#Kunena div.kblock .kcontainer .klatest-subject {
+  margin-bottom: 3px;
+}
+#Kunena div.kblock .kcontainer .klatest-avatar,
+#Kunena div.kblock .kcontainer .ktopic-latest-post-avatar {
+  background-color: #eeeeee;
+  border: 0;
+  display: inline-block;
+  margin: 3px 0 0 10px;
+  padding: 3px;
+  width: auto;
+}
+#Kunena div.kblock .kcontainer .klatest-avatar img,
+#Kunena div.kblock .kcontainer .ktopic-latest-post-avatar img {
+  margin: 0;
+}
+#Kunena div.kblock .kcontainer .kthead-title a {
+  background-color: #eeeeee !important;
+  color: #575757 !important;
+  display: inline-block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding: 3px 5px 1px;
+  text-transform: uppercase;
+}
+#Kunena div.kblock .kcontainer .kthead-title a:hover,
+#Kunena div.kblock .kcontainer .kthead-title a:focus,
+#Kunena div.kblock .kcontainer .kthead-title a:active {
+  background-color: #0a6ebd !important;
+  color: #ffffff !important;
+}
+#Kunena div.kblock .kcontainer .kthead-desc {
+  color: #717171;
+  line-height: 1.4;
+}
+#Kunena div.kblock.kannouncement .kheader {
+  background-color: #428bca;
+  border: 0;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kbody {
+  border: 1px solid #7eb0db;
+  border-top: 0;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc {
+  background-color: #e1edf7;
+  padding: 24px;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc:before,
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc:after {
+  content: " ";
+  display: table;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc:after {
+  clear: both;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc a {
+  background-color: #428bca;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 13px;
+  float: left;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc a:hover,
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc a:focus,
+#Kunena div.kblock.kannouncement #kannouncement .kanndesc a:active {
+  background-color: #0a6ebd;
+  color: #ffffff;
+}
+#Kunena div.kblock.kannouncement div > label {
+  margin-bottom: 24px;
+}
+#Kunena div.kblock.kannouncement .anncreated {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+#Kunena div.kblock.kannouncement .input-append input {
+  display: inline-block;
+}
+#Kunena div.kblock.kannouncement .input-append #kanncreated_img {
+  background: #cccccc;
+}
+#Kunena div.kblock.kannouncement .input-append .icon-calendar:before {
+  content: "\f073";
+  font-family: FontAwesome;
+}
+#Kunena div.kblock div.kactions {
+  background-color: transparent;
+  padding: 12px 24px;
+}
+#Kunena a.ktopic-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+#Kunena #kflattable .kcol-ktopicreplies,
+#Kunena #kflattable .kcol-ktopicicon,
+#Kunena #kflattable .kcol-ktopicviews {
+  display: none;
+  width: 8%;
+}
+@media (min-width: 1200px) {
+  #Kunena #kflattable .kcol-ktopicreplies,
+  #Kunena #kflattable .kcol-ktopicicon,
+  #Kunena #kflattable .kcol-ktopicviews {
+    display: table-cell;
+  }
+}
+#Kunena #kflattable .kcol-ktopictitle {
+  display: table-cell;
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  #Kunena #kflattable .kcol-ktopictitle {
+    display: table-cell;
+    width: 40%;
+  }
+}
+#Kunena #kflattable .kcol-ktopiclastpost {
+  display: none;
+  width: 35%;
+}
+@media (min-width: 1200px) {
+  #Kunena #kflattable .kcol-ktopiclastpost {
+    display: table-cell;
+  }
+}
+#Kunena #kflattable td.ktopicmoderation {
+  display: table-cell !important;
+  margin-top: 0 !important;
+  width: auto !important;
+}
+#Kunena .ktopic-title-cover a {
+  color: #575757;
+}
+#Kunena .ktopic-title-cover a:hover,
+#Kunena .ktopic-title-cover a:focus,
+#Kunena .ktopic-title-cover a:active {
+  color: #0a6ebd;
+}
+#Kunena .ktopic-details-kcategory .ktopic-posted-time {
+  color: #9e9e9e;
+  margin-left: 10px;
+}
+#Kunena .ktopic-details-kcategory .ktopic-by {
+  color: #9e9e9e;
+}
+#Kunena .klist-actions-bottom {
+  border-color: #e5e5e5;
+}
+#Kunena .klist-actions-bottom td {
+  border-color: #e5e5e5;
+  height: auto;
+  padding: 10px;
+}
+#Kunena .klist-bottom {
+  border-color: #e5e5e5;
+}
+#Kunena div.kmsg-header {
+  background-color: #eeeeee;
+  border-bottom: 0;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  #Kunena div.kmsg-header {
+    margin-top: 0;
+  }
+  #Kunena div.kmsg-header:before,
+  #Kunena div.kmsg-header:after {
+    content: " ";
+    display: table;
+  }
+  #Kunena div.kmsg-header:after {
+    clear: both;
+  }
+}
+#Kunena div.kmsg-header h2 {
+  background-color: transparent;
+  color: #575757;
+  font-size: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+@media (max-width: 767px) {
+  #Kunena div.kmsg-header h2 {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+#Kunena div.kmsg-header h2 .kmsgtitle {
+  color: #717171 !important;
+  font-size: 15px;
+}
+#Kunena div.kmsg-header h2 .kmsgdate {
+  color: #717171 !important;
+}
+#Kunena div.kmsg-header h2 span.kmsg-id-top a,
+#Kunena div.kmsg-header h2 span.kmsg-id-bottom a,
+#Kunena div.kmsg-header h2 span.kmsg-id-left a,
+#Kunena div.kmsg-header h2 span.kmsg-id-right a {
+  color: #717171 !important;
+}
+#Kunena td.kmessage-left {
+  padding: 24px;
+}
+#Kunena td.kmessage-left .kmsgbody {
+  margin: 0;
+}
+#Kunena td.kmessage-left .kmsgtext {
+  font-weight: 300;
+}
+#Kunena #kforumsearch td {
+  background-color: transparent;
+  padding: 16px;
+}
+#Kunena #kforumsearch .fieldset {
+  background-color: transparent;
+}
+#Kunena #kforumsearch .fieldset legend {
+  border: 0;
+  display: inline-block;
+  font-size: 15px;
+  width: auto;
+}
+#Kunena #kforumsearch .fieldset input[type="text"] {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#Kunena #kforumsearch .fieldset #keywords {
+  width: 150px;
+}
+#Kunena #kforumsearch #categorylist {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 10px;
+  min-height: 152px;
+  padding: 10px;
+  clear: both;
+}
+@media (max-width: 480px) {
+  #Kunena table#kpostmessage {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  #Kunena table#kpostmessage {
+    padding-left: 0;
+  }
+  #Kunena table#kpostmessage td.kpostbuttons {
+    height: auto;
+  }
+  #Kunena table#kpostmessage td.kpostbuttons #kbbcode-toolbar {
+    height: auto;
+    overflow: hidden;
+  }
+  #Kunena table#kpostmessage #postcatid {
+    width: 100%;
+  }
+  #Kunena table#kpostmessage #subject {
+    width: 100%;
+  }
+}
+#Kunena #kpost-attachments .kattachment .kbutton {
+  display: inline-block;
+  margin: 12px 0;
+}
+#Kunena .k-profile h2 span.kheadbtn a {
+  background-color: #333333;
+  border: 0;
+  color: #9e9e9e;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  padding: 8px 8px 5px;
+}
+#Kunena .k-profile h2 span.kheadbtn a:hover,
+#Kunena .k-profile h2 span.kheadbtn a:focus,
+#Kunena .k-profile h2 span.kheadbtn a:active {
+  background-color: #2196f3;
+}
+#Kunena .k-profile a.ktopic-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+#Kunena table#kprofile td.kcol-first:before,
+#Kunena table#kprofile td.kcol-first:after {
+  content: " ";
+  display: table;
+}
+#Kunena table#kprofile td.kcol-first:after {
+  clear: both;
+}
+@media (max-width: 768px) {
+  #Kunena table#kprofile td.kcol-left {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #Kunena table#kprofile td.kcol-right {
+    display: block;
+    width: 100%;
+  }
+}
+#Kunena table#kprofile dl.tabs dt {
+  border: 1px solid #e5e5e5;
+  font-weight: normal;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+#Kunena table#kprofile dl.tabs dt.open {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  color: #ffffff;
+}
+#Kunena #kprofile-tabs #kflattable {
+  padding-left: 0;
+}
+#Kunena #kprofile-tabs #kflattable tr {
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 0;
+}
+#Kunena #kprofile-tabs td.ktopictittle {
+  display: table-cell;
+}
+@media (max-width: 767px) {
+  #Kunena #kprofile-tabs #kflattable td:nth-child(2) {
+    display: none;
+  }
+}
+#Kunena #kprofile-tabs td.ktopicmoderation {
+  display: table-cell;
+  width: auto;
+}
+#Kunena #kprofile-tabs div.kblock .kcontainer table tr:last-child td {
+  border-bottom: 1px solid #e5e5e5;
+}
+#Kunena #searchuser_tbody .search-user .inputbox {
+  display: inline-block;
+}
+#Kunena #kannouncement .kbody label {
+  display: block;
+}
+#Kunena div#kwhoisonline table.kblocktable td.kcol-first,
+#Kunena div#kfrontstats-tbody table.kblocktable td.kcol-first {
+  width: 8% !important;
+}
+.klatest .klatest-items .klatest-item {
+  border-bottom: 1px solid #eaeaea;
+  padding: 12px 0;
+  margin: 0;
+}
+.klatest .klatest-items .klatest-item:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+.klatest .klatest-items .klatest-item:first-child {
+  padding-top: 0;
+}
+.klatest .klatest-items .klatest-item .klatest-subject a {
+  color: #575757;
+  font-size: 15px;
+}
+.klatest .klatest-items .klatest-item .klatest-subject a:hover,
+.klatest .klatest-items .klatest-item .klatest-subject a:focus,
+.klatest .klatest-items .klatest-item .klatest-subject a:active {
+  color: #0a6ebd;
+}
+.klatest .klatest-items .klatest-item .knewchar {
+  vertical-align: middle;
+}
+.klatest .klatest-items .klatest-item .klatest-avatar {
+  margin-left: 10px;
+}
+.klatest .klatest-items .klatest-item .klatest-avatar img {
+  border: 0;
+  margin: 6px 0 0;
+  padding: 0;
+}
+.klatest .klatest-items .klatest-item .klatest-posttime,
+.klatest .klatest-items .klatest-item .klatest-cat,
+.klatest .klatest-items .klatest-item .klatest-author {
+  font-family: 'Lora', serif;
+  font-size: 13px;
+}
+.klatest-preview-content {
+  color: #575757;
+}
+.view-announcement #Kunena div.kblock div.kactions {
+  background-color: #f7f7f7;
+  border-color: #e5e5e5;
+}
+.view-announcement #Kunena div.kblock div.kactions a {
+  color: #2196f3 !important;
+}
+.view-announcement #Kunena div.kblock div.kactions a:hover,
+.view-announcement #Kunena div.kblock div.kactions a:focus,
+.view-announcement #Kunena div.kblock div.kactions a:active {
+  color: #0a6ebd !important;
+}
+.view-announcement #Kunena div.kblock.kannouncement div#kannouncement div.kanndesc {
+  background-color: transparent;
+  border-color: #e5e5e5;
+}
+.view-announcement #Kunena div.kblock.kannouncement div#kannouncement div.kanndesc label {
+  margin-bottom: 24px;
+}
+.view-announcement #Kunena div.kblock.kannouncement #kannouncement .kbody {
+  border-color: #e5e5e5;
+}
+.view-announcement #Kunena #kanncreated {
+  display: inline-block;
+}
+.view-announcement #Kunena #kanncreated_img {
+  display: inline-block;
+  height: 46px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.view-announcement #Kunena textarea {
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px;
+}
+.view-announcement #Kunena table.kannouncement th,
+.view-announcement #Kunena table.kannouncement td {
+  border: 1px solid #e5e5e5;
+  padding: 10px 15px;
+}
+.view-announcement #Kunena table.kannouncement th {
+  background-color: #eeeeee;
+  color: #575757;
+  font-weight: 400;
+}
+.view-announcement #Kunena table.kannouncement td {
+  background-color: transparent;
+}
+.ie8 #Kunena .klist-markallcatsread .fltrt {
+  width: 50%;
+}
+.ie8 #Kunena .klist-actions .klist-jump-all {
+  width: 20% !important;
+}
+.ie8 #Kunena .klist-actions .klist-jump-all .inputbox {
+  vertical-align: top;
+}
+.ie8 #Kunena #advsearch_options .kcol legend {
+  display: block;
+  margin-bottom: 24px;
+}

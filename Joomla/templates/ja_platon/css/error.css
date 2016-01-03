@@ -1,0 +1,116 @@
+/**
+ * ------------------------------------------------------------------------
+ * JA Jason Template
+ * ------------------------------------------------------------------------
+ * Copyright (C) 2004-2011 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+ * @license - Copyrighted Commercial Software
+ * Author: J.O.O.M Solutions Co., Ltd
+ * Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+ * This file may not be redistributed in whole or significant part.
+ * ------------------------------------------------------------------------
+ */
+
+/* MAIN STYLE
+---------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #222;
+	font-family: Roboto;
+	font-size: 14px;
+	line-height: 1.625;
+	margin: 0;
+}
+
+/* OutLine */
+#outline {
+	margin-top: 9%;
+	text-align: center;
+}
+
+/* Eror Code */
+.error-code {
+	color: #fff;
+	font-size: 200px;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: -10px;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.error-code:after {
+	content: "";
+	width: 100px;
+	border-bottom: 3px solid #fab325;
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -50px;
+}
+
+
+
+/* Message Error */
+.error-message {
+}
+
+/* Message Error */
+.error-message h2 {
+	color: #ddd;
+	font-size: 40px;
+	font-weight: 400;
+	margin: 0 0 20px;
+	text-transform: uppercase;
+}
+
+#errorboxbody p {
+	color: #999;
+	display: block;
+	margin: 0 0 30px;
+}
+
+/* Button Home */
+.button-home {
+	background: #fab325;
+	border: 1px solid #fab325;
+	color: #fff;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 12px 40px;
+	font-weight: bold;
+}
+
+.button-home:hover,
+.button-home:focus,
+.button-home:active {
+	background: #e79c05;
+	border-color: #e79c05;
+}
+
+@media (max-width:  360px){
+
+	/* OutLine */
+	#outline {
+		margin-top: 20%;
+	}
+
+	/* Eror Code */
+	.error-code {
+	  font-size: 150px;
+	}
+
+	/* Message Error */
+	.error-message {
+	}
+
+	/* Message Error */
+	.error-message h2 {
+	  font-size: 24px;
+	}
+}
