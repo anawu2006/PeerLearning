@@ -1,0 +1,24 @@
+<?php 
+require_once($CFG->dirroot.'/lib/html2text.php');
+require_once($CFG->dirroot.'/auth/joomdle/auth.php');
+
+$course_id         = required_param('id',    PARAM_INT);
+
+$enrol_message = $instance->customtext1;
+//$enrol_message = get_config('enrol_joomdle', 'enrol_message');
+
+$auth = new auth_plugin_joomdle ();
+$url = $auth->call_method ('getSellUrl', $course_id);
+
+$url = get_config('auth/joomdle', 'joomla_url') . '/' . $url;
+$url = "<a target='_top' href=\"$url\">$url</a>";
+
+$enrol_message = str_replace ('BUY_COURSE_URL', $url, $enrol_message);
+?>
+        <table align="center" width="100%">
+          <tr>
+            <td align="center"><?php echo ($enrol_message) ?></td>
+            <td>
+            </td>
+          </tr>
+        </table>

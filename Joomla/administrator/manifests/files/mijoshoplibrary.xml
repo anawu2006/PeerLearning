@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="file" method="upgrade">
+	<name>MijoShop Library</name>
+	<author>Mijosoft LLC</author>
+	<creationDate>June 2013</creationDate>
+	<authorEmail>info@mijosoft.com</authorEmail>
+	<authorUrl>http://mijosoft.com</authorUrl>
+	<copyright>Copyright (C) Mijosoft LLC, mijosoft.com</copyright>
+	<license>GNU/GPL, http://www.gnu.org/licenses/gpl-2.0.html</license>
+	<version>1.0.0</version>
+	<description><![CDATA[The core library used by MijoShop component.]]></description>
+	
+	<fileset>
+        <files target="components/com_mijoshop/">
+        </files>
+    </fileset>
+	
+	<scriptfile>script.php</scriptfile>
+</extension>

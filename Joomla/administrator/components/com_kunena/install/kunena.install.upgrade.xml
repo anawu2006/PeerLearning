@@ -666,15 +666,9 @@
 		         versionname="Internal">
 			<query mode="silenterror">ALTER TABLE `#__kunena_users` CHANGE COLUMN `canSubscribe` `canSubscribe` tinyint(1) NOT NULL default '-1'</query>
 		</version>
-		<version version="4.0.7-DEV2"
-		         versiondate="2015-10-16"
-		         versionname="Internal">
-			<query mode="silenterror">ALTER TABLE `#__kunena_categories` CHANGE COLUMN `iconset` `iconset` varchar(255) NOT NULL default 'default'</query>
-			<query mode="silenterror">UPDATE `#__kunena_categories` SET iconset='default' WHERE iconset=''</query>
-		</version>
-		<version version="4.0.7"
-		         versiondate="2015-11-16"
-		         versionname="Albareto">
+		<version version="4.0.6"
+		         versiondate="2015-09-28"
+		         versionname="Pielungo">
 		</version>
 	</upgrade>
 </comupgrade>

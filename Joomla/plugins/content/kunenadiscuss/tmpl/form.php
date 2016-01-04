@@ -3,7 +3,7 @@
  * Kunena Discuss Plugin
  * @package Kunena.plg_content_kunenadiscuss
  *
- * @copyright (C) 2008 - 2015 Kunena Team. All rights reserved.
+ * @copyright (C) 2008 - 2013 Kunena Team. All rights reserved.
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
  * @link http://www.kunena.org
  **/
@@ -39,7 +39,7 @@ defined( '_JEXEC' ) or die ();
 					<?php if ($this->hasCaptcha()) : ?>
 					<tr>
 						<td><span class="kdiscuss-quick-post-label"><?php echo JText::_('PLG_KUNENADISCUSS_CAPTCHA') ?></span></td>
-						<td><div id="dynamic_recaptcha_1"> </div></td>
+						<td><?php $this->displayCaptcha(); ?></td>
 					</tr>
 					<?php endif; ?>
 					<tr>

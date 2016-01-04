@@ -1,0 +1,36 @@
+<table cellspacing="0" cellpadding="5" border="0" class="boxaligncenter">
+
+<tr valign="top">
+    <td align="right">enrol_cost:</td>
+    <td>
+        <input type="text" size="5" name="enrol_cost" value="<?php echo $frm->enrol_cost ?>" />
+    </td>
+    <td>
+    <?php  print_string("costdefault") ?>
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right">enrol_currency:</td>
+    <td>
+    <?php choose_from_menu ($paypalcurrencies, "enrol_currency", $frm->enrol_currency, "","", "") ?>
+    </td>
+    <td>
+    <?php  print_string("currency") ?>
+    </td>
+</tr>
+
+<tr valign="top">
+    <td align="right">enrol_joomdle_message</td>
+    <td>
+        <textarea id="enrol_message" name="enrol_message" cols="30" rows="10" style="overflow: auto; white-space: nowrap;">
+<?php echo $frm->enrol_message ?>
+</textarea>
+    </td>
+    <td>
+    <?php  print_string("messagedesc", "enrol_joomdle") ?>
+    </td>
+</tr>
+
+
+</table>

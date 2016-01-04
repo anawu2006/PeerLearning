@@ -197,12 +197,32 @@ class KunenaUpload
 	}
 
 	/**
+	 * Get maximum limit for file uploads.
+	 *
+	 * @return int  Size limit in bytes.
+	 */
+	public function getMaxSize()
+	{
+		$config = KunenaConfig::getInstance();
+
+		return (int) max(
+			0,
+			min(
+				$this->toBytes(ini_get('upload_max_filesize')) - 1024,
+				$this->toBytes(ini_get('post_max_size')) - 1024,
+				$this->toBytes(ini_get('memory_limit')) - 1024 * 1024,
+				max($config->imagesize, $config->filesize) * 1024
+			)
+		);
+	}
+
+	/**
 	 * Upload a file via AJAX, supports chunks and fallback to regular file upload.
 	 *
-	 * @param  array $options Upload options.
+	 * @param  array   $options   Upload options.
 	 *
-	 * @return array Updated options.
-	 * @throws null
+	 * @return array  Updated options.
+	 * @throws Exception|RuntimeException
 	 */
 	public function ajaxUpload(array $options)
 	{
@@ -218,12 +238,12 @@ class KunenaUpload
 
 		$options += $defaults;
 
+		$config = KunenaConfig::getInstance();
 		$exception = null;
 		$in = null;
 		$out = null;
 		$size = $bytes = 0;
 		$outFile = null;
-		$type = $options['mime'];
 
 		// Look for the content type header
 		if (isset($_SERVER['HTTP_CONTENT_TYPE']))
@@ -259,7 +279,10 @@ class KunenaUpload
 			{
 				throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_EXTRA_CHUNK'), 400);
 			}
-
+			if ($options['size'] > max($config->filesize, $config->imagesize) * 1024)
+			{
+				throw new RuntimeException(JText::sprintf('COM_KUNENA_UPLOAD_ERROR_SIZE_X', $this->bytes($options['size'])), 400);
+			}
 
 			if (strpos($contentType, 'multipart') !== false)
 			{
@@ -329,20 +352,9 @@ class KunenaUpload
 
 				$size += $bytes;
 
-				if (stripos($type, 'image/') !== true)
+				if ($size > max($config->filesize, $config->imagesize) * 1024)
 				{
-					if (!$this->checkFileSizeFileAttachment($size))
-					{
-						throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_FILE_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
-					}
-				}
-
-				if (stripos($type, 'image/') !== false)
-				{
-					if (!$this->checkFileSizeImageAttachment($size))
-					{
-						throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_IMAGE_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
-					}
+					throw new RuntimeException(JText::sprintf('COM_KUNENA_UPLOAD_ERROR_SIZE_X', $this->bytes($size)), 400);
 				}
 			}
 		}
@@ -378,6 +390,11 @@ class KunenaUpload
 		}
 
 		$options['chunkStart'] = (int) $size;
+		$options['chunkEnd'] = min(
+				$size + 1024*1024,
+				$size + $this->getMaxSize(),
+				max($size, $options['size'], is_null($options['size']) ? $this->getMaxSize() : 0)
+			) - 1;
 
 		if ($options['completed'])
 		{
@@ -471,76 +488,25 @@ class KunenaUpload
 	 * Check if filesize on file which on going to be uploaded doesn't exceed the limits set by Kunena configuration and Php configuration
 	 *
 	 * @param   int      $filesize  The size of file in bytes
+	 * @param   boolean  $avatar    If the file is an avatar
 	 *
 	 * @return boolean
 	 */
-	protected function checkFileSizeAvatar($filesize)
+	protected function checkFileSize($filesize, $avatar)
 	{
-		if ($filesize > intval(KunenaConfig::getInstance()->avatarsize) * 1024)
+		if (!$avatar)
+		{
+			if ($filesize > $this->getMaxSize())
+			{
+				return false;
+			}
+		}
+		else if ($avatar && $filesize > intval(KunenaConfig::getInstance()->avatarsize) * 1024)
 		{
 			return false;
 		}
 
-		return (int) max(
-				0,
-				min(
-						$this->toBytes(ini_get('upload_max_filesize')) - 1024,
-						$this->toBytes(ini_get('post_max_size')) - 1024,
-						$this->toBytes(ini_get('memory_limit')) - 1024 * 1024
-				)
-		);
-	}
-
-	/**
-	 * Check if filesize on file which on going to be uploaded doesn't exceed the limits set by Kunena configuration and PHP configuration
-	 *
-	 * @param   int      $filesize  The size of file in bytes
-	 *
-	 * @return boolean
-	 */
-	protected function checkFileSizeFileAttachment($filesize)
-	{
-		$file = $filesize > KunenaConfig::getInstance()->filesize * 1024;
-
-		if ($file)
-		{
-			return false;
-		}
-
-		return (int) max(
-				0,
-				min(
-						$this->toBytes(ini_get('upload_max_filesize')) - 1024,
-						$this->toBytes(ini_get('post_max_size')) - 1024,
-						$this->toBytes(ini_get('memory_limit')) - 1024 * 1024
-				)
-		);
-	}
-
-	/**
-	 * Check if filesize on image file which on going to be uploaded doesn't exceed the limits set by Kunena configuration and PHP configuration
-	 *
-	 * @param   int      $filesize  The size of file in bytes
-	 *
-	 * @return boolean
-	 */
-	protected function checkFileSizeImageAttachment($filesize)
-	{
-		$image = $filesize > intval(KunenaConfig::getInstance()->imagesize * 1024);
-
-		if ($image)
-		{
-			return false;
-		}
-
-		return (int) max(
-				0,
-				min(
-						$this->toBytes(ini_get('upload_max_filesize')) - 1024,
-						$this->toBytes(ini_get('post_max_size')) - 1024,
-						$this->toBytes(ini_get('memory_limit')) - 1024 * 1024
-				)
-		);
+		return true;
 	}
 
 	/**
@@ -563,7 +529,7 @@ class KunenaUpload
 		$file->success = false;
 		$file->isAvatar = false;
 
-		if ($type != 'attachment')
+		if ( $type != 'attachment' )
 		{
 			$file->isAvatar = true;
 		}
@@ -601,43 +567,19 @@ class KunenaUpload
 					);
 				}
 			}
+		}
 
-			if (extension_loaded('fileinfo'))
+		if (!$this->checkFileSize($file->size, true))
+		{
+			if ($file->isAvatar)
 			{
-				$finfo = new finfo(FILEINFO_MIME);
-				$type = $finfo->file($file->tmp_name);
+				throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_AVATAR_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
 			}
 			else
 			{
-				$info = getimagesize($file->tmp_name);
-				$type = $info['mime'];
-			}
-
-			if ($file->isAvatar)
-			{
-				if (!$this->checkFileSizeAvatar($file->size))
-				{
-					throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_AVATAR_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
-				}
-			}
-
-			if (exif_imagetype($file->tmp_name))
-			{
-				if (!$this->checkFileSizeImageAttachment($file->size))
-				{
-					throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_IMAGE_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
-				}
-			}
-
-			if (!exif_imagetype($file->tmp_name))
-			{
-				if (!$this->checkFileSizeFileAttachment($file->size))
-				{
-					throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_FILE_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
-				}
+				throw new RuntimeException(JText::_('COM_KUNENA_UPLOAD_ERROR_FILE_EXCEED_LIMIT_IN_CONFIGURATION'), 500);
 			}
 		}
-
 
 		if (!KunenaFile::copy($file->tmp_name, $file->destination))
 		{

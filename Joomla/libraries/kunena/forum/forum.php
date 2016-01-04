@@ -213,7 +213,7 @@ abstract class KunenaForum
 	 */
 	public static function isDev()
 	{
-		if ('4.0.7' == '@' . 'kunenaversion' . '@')
+		if ('4.0.6' == '@' . 'kunenaversion' . '@')
 		{
 			return true;
 		}
@@ -398,7 +398,7 @@ abstract class KunenaForum
 
 	protected static function buildVersion()
 	{
-		if ('4.0.7' == '@' . 'kunenaversion' . '@')
+		if ('4.0.6' == '@' . 'kunenaversion' . '@')
 		{
 			$file = JPATH_MANIFESTS . '/packages/pkg_kunena.xml';
 			$manifest = simplexml_load_file($file);
@@ -406,11 +406,11 @@ abstract class KunenaForum
 		}
 		else
 		{
-			self::$version = strtoupper ( '4.0.7' );
+			self::$version = strtoupper ( '4.0.6' );
 		}
 
 		self::$version_major = substr(self::$version, 0, 3);
-		self::$version_date = ('2015-11-16' == '@' . 'kunenaversiondate' . '@') ? JFactory::getDate()->format('Y-m-d') : '2015-11-16';
-		self::$version_name = ('Albareto' == '@' . 'kunenaversionname' . '@') ? 'Git Repository' : 'Albareto';
+		self::$version_date = ('2015-09-28' == '@' . 'kunenaversiondate' . '@') ? JFactory::getDate()->format('Y-m-d') : '2015-09-28';
+		self::$version_name = ('Pielungo' == '@' . 'kunenaversionname' . '@') ? 'Git Repository' : 'Pielungo';
 	}
 }

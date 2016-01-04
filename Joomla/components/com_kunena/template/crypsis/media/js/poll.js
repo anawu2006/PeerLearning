@@ -84,18 +84,20 @@ jQuery(document).ready(function() {
 		});
 	}
 
-	if ( typeof pollcategoriesid != 'undefined' && jQuery('#poll_exist_edit').length == 0 ) {
+	if ( typeof pollcategoriesid != 'undefined' ) {
 		var catid = jQuery('#kcategory_poll').val();
-	
+
 		if ( pollcategoriesid[catid] !== undefined ) {
 			jQuery('.pollbutton').show();
 		} else {
 			jQuery('.pollbutton').hide();
 		}
-	} else if ( jQuery('#poll_exist_edit').length > 0 ) {
-		jQuery('.pollbutton').show();
 	} else {
 		jQuery('.pollbutton').hide();
+	}
+	
+	if ( jQuery('#poll_exist_edit') != 'undefined' ) {
+		jQuery('.pollbutton').show();
 	}
 
 	jQuery('#kpoll_go_results').click(function() {

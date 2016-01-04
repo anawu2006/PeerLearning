@@ -2,8 +2,8 @@
 <!DOCTYPE extension>
 <extension version="2.5" type="plugin" group="kunena" method="upgrade">
 	<name>plg_kunena_community</name>
-	<version>4.0.7</version>
-	<creationDate>2015-11-16</creationDate>
+	<version>4.0.6</version>
+	<creationDate>2015-09-28</creationDate>
 	<author>Kunena Team</author>
 	<authorEmail>Kunena@kunena.org</authorEmail>
 	<authorUrl>http://www.kunena.org</authorUrl>

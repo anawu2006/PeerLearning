@@ -48,10 +48,6 @@ jQuery(document).ready(function() {
 		}
 	});
 
-	jQuery("input.kcatcheckall").click(function(){
-		jQuery("input.kcatcheckall:checkbox").not(this).prop('checked', this.checked);
-		});
-
 	jQuery(document).ready(function() {
 		jQuery('[rel=popover]').popover();
 	});

@@ -1,6 +1,6 @@
 <?php defined('MOODLE_INTERNAL') || die();
  $configuration = array (
-  'siteidentifier' => '910ebf82296bd3b1d493e2fc82790b8e',
+  'siteidentifier' => '955b9124e0b5e7f655cce453e1ecfa17',
   'stores' => 
   array (
     'default_application' => 
@@ -47,8 +47,8 @@
   array (
     0 => 
     array (
-      'mode' => 4,
-      'store' => 'default_request',
+      'mode' => 1,
+      'store' => 'default_application',
       'sort' => -1,
     ),
     1 => 
@@ -59,8 +59,8 @@
     ),
     2 => 
     array (
-      'mode' => 1,
-      'store' => 'default_application',
+      'mode' => 4,
+      'store' => 'default_request',
       'sort' => -1,
     ),
   ),
